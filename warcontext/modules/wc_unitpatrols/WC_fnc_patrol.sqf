@@ -15,6 +15,7 @@
 		"_move",
 		"_position",
 		"_originalsize",
+		"_enemyside",
 		"_wp",
 		"_wptype"
 	];
@@ -27,6 +28,11 @@
 	};
 
 	_leader = leader _group;
+	if((side _leader) in wcside) then {
+		_enemyside = wcenemyside;
+	} else {
+		_enemyside = wcside;
+	};
 
 	if(_group in wcpatrolgroups) exitwith {};
 	wcpatrolgroups = wcpatrolgroups + [_group];
@@ -51,7 +57,7 @@
 			_list = (getmarkerpos _marker) nearEntities [["Man"], _areasize];
 			if(count _list > 0) then {
 				{
-					if(side _x == west) then {
+					if(side _x in _enemyside) then {
 						if( _x distance (_leader getHideFrom _x) < 100) then {
 							_cibles = _cibles + [_x];
 						};
@@ -84,19 +90,18 @@
 			if(count (units _group) > 2) then {
 				_wptype = ["MOVE", "SAD"];
 			} else {
-				_wptype = ["MOVE", "SAD", "HOLD", "SENTRY", "GUARD", "TALK", "DISMISSED"];
+				_wptype = ["MOVE", "SAD", "HOLD", "SENTRY"];
 			};
 
 			_group setBehaviour "SAFE";
 			_group setCombatMode "GREEN";
 
 			_formationtype = ["COLUMN", "STAG COLUMN","WEDGE","ECH LEFT","ECH RIGHT","VEE","LINE","FILE","DIAMOND"] call BIS_fnc_selectRandom;
+			_group setFormation _formationtype;
+
 			_position = [_marker, "onground"] call WC_fnc_createpositioninmarker;
 
-			_group setformation _formationtype;
-
 			_wp = _group addWaypoint [_position, 0];
-			_wp setWaypointFormation _formationtype;
 			_wp setWaypointPosition [_position, 5];
 			_wp setWaypointType (_wptype call BIS_fnc_selectRandom);
 			_wp setWaypointVisible true;
@@ -106,7 +111,7 @@
 			_move = false;
 			while { ((wcalert < 50) and !(_move) and (count (units _group) == _originalsize)) } do {
 				_lastposition = position (leader _group);
-				sleep 30;
+				sleep 10;
 				if(_lastposition distance (position (leader _group)) < 5) then {
 					_move = true;
 				};
