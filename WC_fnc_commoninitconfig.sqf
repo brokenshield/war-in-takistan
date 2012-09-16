@@ -223,7 +223,9 @@
 	//wcrescuecivils = ["TK_CIV_Takistani01_EP1", "TK_CIV_Takistani02_EP1", "TK_CIV_Takistani03_EP1", "TK_CIV_Takistani04_EP1", "TK_CIV_Takistani05_EP1", "TK_CIV_Takistani06_EP1", "TK_CIV_Worker01_EP1", "TK_CIV_Worker02_EP1"];
 	wcrescuecivils = ["ibr_lingorman1","ibr_lingorman2","ibr_lingorman3","ibr_lingorman4","ibr_lingorman5","ibr_lingorman6","ibr_lingorman7","ibr_lingorman1s","ibr_lingorman2s","ibr_lingorman3s","ibr_lingorman4s","ibr_lingorman5s","ibr_lingorman6s","ibr_lingorman7s","Functionary1", "Functionary2","Damsel1","Damsel2","Damsel3","Damsel4","Damsel5","Hooker1","Hooker2","Hooker3","Hooker4","Hooker5"];
 	
-
+	// Kindof civilian staff
+	wccivilianstaff = ["ibr_scientist", "ibr_scientist2", "ibr_bodyguard", "Doctor", "Functionary1", "Functionary2", "Secretary1", "Secretary2", "Secretary3", "Secretary4", "Functionary1_EP1", "Functionary2_EP1"];
+		
 	// kind of units crew of enemies vehicles
 	//wccrewforces = ["TK_Soldier_Crew_EP1"];
 	wccrewforces = ["ibr_arl_crew"];

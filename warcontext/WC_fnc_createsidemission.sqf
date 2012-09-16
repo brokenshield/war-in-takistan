@@ -1184,9 +1184,35 @@
 		case 83: {
 			_missiontext = [_missionname, "Secure a Radio Telescope"];
 			_vehicle = (nearestObjects [_position, ["Land_MBG_Radiotelescope"], 400]) call BIS_fnc_selectRandom;
+		
+			// Generate Friendlies
+			hintc "WARCONTEXT: CREATING FRIENDLY PATROL";
+			_group = createGroup west;
+			//wcgarbage = [_group, 10] spawn WC_fnc_patrol;
+			_count = 0;
+			while {_count < wclevelmaxoutofcity} do {
+				_type = wcfriendlyforces call BIS_fnc_selectRandom;
+				_unit = _group createUnit [_type, _position, [], 0.8, "NONE"];
+				_count = _count + 1;				
+			};			
+			hintc "WARCONTEXT: FRIENDLY PATROL CREATED";
+			
+			//SPAWN FACILITY STAFF
+			hintc "WARCONTEXT: CREATING CIVILIAN STAFF";
+			_group = createGroup civilian;
+			_count = 0;
+			while {_count < wclevelmaxoutofcity} do {
+				_type = wccivilianstaff call BIS_fnc_selectRandom;
+				_unit = _group createUnit [_type, _position, [], 0.2, "NONE"];
+				removeallweapons _unit;
+				_count = _count + 1;				
+			};
+			hintc "WARCONTEXT: CIVILIAN STAFF CREATED";
+			//END SPAWN FACILITY STAFF		
+			
 			wcgarbage = [_vehicle] spawn WC_fnc_securezone;
 			_missiontype = "secure";
-			wcbonusfame = 0;				
+			wcbonusfame = 0;			
 		};	
 		
 		case 100: {

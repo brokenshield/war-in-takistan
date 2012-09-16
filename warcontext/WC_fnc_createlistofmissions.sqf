@@ -85,7 +85,7 @@
 		};
 		
 		//DEBUG: Choose a specific mission to test here!
-		//_missionnumber = 17;
+		_missionnumber = 83;
 		
 		_thislist = _thislist + [_missionnumber];
 
