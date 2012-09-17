@@ -151,7 +151,7 @@
 					wcchoosemissionmenu = nil;
 				};
 			} else {
-				wcgarbage = ["Headquarter radio", "You can not talk with headquarter", "Be one of the three best team members to talk with headquarter", 10] spawn WC_fnc_playerhint;
+				wcgarbage = ["Headquarters radio", "You cannot talk with headquarters", "Be one of the three best team members to talk with headquarters", 10] spawn WC_fnc_playerhint;
 			};
 		};
 
