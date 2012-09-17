@@ -866,9 +866,22 @@
 		};
 
 		case 56: {
-			_missiontext = [_missionname,"Defend the barracks"];
+			_missiontext = [_missionname,"Defend the church"];
 			_vehicle = (nearestObjects [_position, ["Land_Church_03"], 400]) call BIS_fnc_selectRandom;
 			_vehicle setVehicleInit "this addAction ['<t color=''#ff4500''>Defend the barrack</t>', 'warcontext\actions\WC_fnc_dobegindefend.sqf',[],6,false];";
+			
+			//SPAWN FACILITY STAFF
+			diag_log format ["WARCONTEXT: CREATING CIVILIANS"];
+			_group = createGroup civilian;
+			_count = 0;
+			while {_count < wclevelmaxoutofcity} do {
+				_type = wcrescuecivils call BIS_fnc_selectRandom;
+				_unit = _group createUnit [_type, _position, [], 0.2, "NONE"];
+				removeallweapons _unit;
+				_count = _count + 1;				
+			};
+			//END SPAWN FACILITY STAFF	
+			
 			wcgarbage = [_vehicle] spawn WC_fnc_defend;
 			processInitCommands;
 			_missiontype = "defend";
@@ -1021,6 +1034,19 @@
 		case 71: {
 			_missiontext = [_missionname, "Secure a hotel"];
 			_vehicle = (nearestObjects [_position, ["Land_ibrhotel"], 400]) call BIS_fnc_selectRandom;
+			
+			//SPAWN FACILITY STAFF
+			diag_log format ["WARCONTEXT: CREATING CIVILIANS"];
+			_group = createGroup civilian;
+			_count = 0;
+			while {_count < wclevelmaxoutofcity} do {
+				_type = wccivilianstaff call BIS_fnc_selectRandom;
+				_unit = _group createUnit [_type, _position, [], 0.2, "NONE"];
+				removeallweapons _unit;
+				_count = _count + 1;				
+			};
+			//END SPAWN FACILITY STAFF				
+			
 			wcgarbage = [_vehicle] spawn WC_fnc_securezone;
 			_missiontype = "secure";
 			wcbonusfame = 0;
@@ -1141,6 +1167,30 @@
 			_missiontext = [_missionname,"Defend a Presidential Palace"];
 			_vehicle = (nearestObjects [_position, ["flag_gal"], 400]) call BIS_fnc_selectRandom;
 			_vehicle setVehicleInit "this addAction ['<t color=''#ff4500''>Defend the Palace</t>', 'warcontext\actions\WC_fnc_dobegindefend.sqf',[],6,false];";
+			
+			// Generate Friendlies
+			diag_log format ["WARCONTEXT: CREATING FRIENDLY PATROL"];
+			_group = createGroup west;
+			//wcgarbage = [_group, 10] spawn WC_fnc_patrol;
+			_count = 0;
+			while {_count < wclevelmaxoutofcity} do {
+				_type = wcfriendlyforces call BIS_fnc_selectRandom;
+				_unit = _group createUnit [_type, _position, [], 0.8, "NONE"];
+				_count = _count + 1;				
+			};			
+			
+			//SPAWN FACILITY STAFF
+			diag_log format ["WARCONTEXT: CREATING CIVILIANS"];
+			_group = createGroup civilian;
+			_count = 0;
+			while {_count < wclevelmaxoutofcity} do {
+				_type = wccivilianstaff call BIS_fnc_selectRandom;
+				_unit = _group createUnit [_type, _position, [], 0.2, "NONE"];
+				removeallweapons _unit;
+				_count = _count + 1;				
+			};
+			//END SPAWN FACILITY STAFF	
+			
 			wcgarbage = [_vehicle] spawn WC_fnc_defend;
 			processInitCommands;
 			_missiontype = "defend";
@@ -1176,6 +1226,18 @@
 		case 82: {
 			_missiontext = [_missionname, "Secure FOB Eddie"];
 			_vehicle = (nearestObjects [_position, ["FlagCarrierNATO_EP1"], 400]) call BIS_fnc_selectRandom;
+			
+			// Generate Friendlies
+			diag_log format ["WARCONTEXT: CREATING FRIENDLY PATROL"];
+			_group = createGroup west;
+			//wcgarbage = [_group, 10] spawn WC_fnc_patrol;
+			_count = 0;
+			while {_count < wclevelmaxoutofcity} do {
+				_type = wcfriendlyforces call BIS_fnc_selectRandom;
+				_unit = _group createUnit [_type, _position, [], 0.8, "NONE"];
+				_count = _count + 1;				
+			};			
+		
 			wcgarbage = [_vehicle] spawn WC_fnc_securezone;
 			_missiontype = "secure";
 			wcbonusfame = 0;
@@ -1186,7 +1248,7 @@
 			_vehicle = (nearestObjects [_position, ["Land_MBG_Radiotelescope"], 400]) call BIS_fnc_selectRandom;
 		
 			// Generate Friendlies
-			hintc "WARCONTEXT: CREATING FRIENDLY PATROL";
+			diag_log format ["WARCONTEXT: CREATING FRIENDLY PATROL"];
 			_group = createGroup west;
 			//wcgarbage = [_group, 10] spawn WC_fnc_patrol;
 			_count = 0;
@@ -1195,10 +1257,9 @@
 				_unit = _group createUnit [_type, _position, [], 0.8, "NONE"];
 				_count = _count + 1;				
 			};			
-			hintc "WARCONTEXT: FRIENDLY PATROL CREATED";
 			
 			//SPAWN FACILITY STAFF
-			hintc "WARCONTEXT: CREATING CIVILIAN STAFF";
+			diag_log format ["WARCONTEXT: CREATING CIVILIANS"];
 			_group = createGroup civilian;
 			_count = 0;
 			while {_count < wclevelmaxoutofcity} do {
@@ -1207,7 +1268,6 @@
 				removeallweapons _unit;
 				_count = _count + 1;				
 			};
-			hintc "WARCONTEXT: CIVILIAN STAFF CREATED";
 			//END SPAWN FACILITY STAFF		
 			
 			wcgarbage = [_vehicle] spawn WC_fnc_securezone;
