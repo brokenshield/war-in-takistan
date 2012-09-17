@@ -71,11 +71,11 @@
 		wcgarbage = ["Presets", position preset] spawn BIS_fnc_3dcredits;
 		wcgarbage = ["Repair center", getmarkerpos "repair"] spawn BIS_fnc_3dcredits;
 		wcgarbage = ["Recruitment", getmarkerpos "recruit1"] spawn BIS_fnc_3dcredits;
-		wcgarbage = ["Hall of fames", getpos teammanage] spawn BIS_fnc_3dcredits;
+		wcgarbage = ["Hall of fame", getpos teammanage] spawn BIS_fnc_3dcredits;
 		wcgarbage = ["Clothes", getmarkerpos "clothes"] spawn BIS_fnc_3dcredits;
 		wcgarbage = ["Jail", getmarkerpos "jail"] spawn BIS_fnc_3dcredits;
 		wcgarbage = ["Headquarters", getpos anim] spawn BIS_fnc_3dcredits;
-		wcgarbage = ["Ied training", getpos iedtraining] spawn BIS_fnc_3dcredits;
+		wcgarbage = ["IED training", getpos iedtraining] spawn BIS_fnc_3dcredits;
 	};
 
 	// create a light in takistan base

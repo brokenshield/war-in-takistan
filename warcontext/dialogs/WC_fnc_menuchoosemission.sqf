@@ -141,7 +141,7 @@
 			closedialog 0;
 			menuaction = -1;
 			if((_count < 4) and (name player in wcinteam)) then {
-				wcgarbage = ["Headquarter radio", "Sending informations to headquarter...", "Wait during mission computation", 3] spawn WC_fnc_playerhint;
+				wcgarbage = ["Headquarters radio", "Sending mission choice to headquarters...", "Standby for mission computation", 3] spawn WC_fnc_playerhint;
 				sleep 3;
 				wcaskformission = [player,_wccurrentmission];
 				["wcaskformission", "server"] call WC_fnc_publicvariable;

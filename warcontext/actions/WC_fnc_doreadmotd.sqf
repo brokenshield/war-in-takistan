@@ -5,7 +5,7 @@
 	};
 	
 	if(count wcmotd == 0) then {
-		"Informations of the day" hintC ["No informations"];
+		"Information of the day" hintC ["No information"];
 	} else {
-		"Informations of the day" hintC wcmotd;
+		"Information of the day" hintC wcmotd;
 	};
