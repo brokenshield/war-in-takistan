@@ -41,7 +41,7 @@
 	if (wcteamlevel == 8) then { wclistofweapons = wclistofweapons0;};
 	if (wcteamlevel == 7) then { wclistofweapons = wclistofweapons0;};
 	if (wcteamlevel == 6) then { wclistofweapons = wclistofweapons1;};
-	if (wcteamlevel == 5) then { wclistofweapons = wclistofweapons3;};
+	if (wcteamlevel == 5) then { wclistofweapons = wclistofweapons1;};
 	if (wcteamlevel == 4) then { wclistofweapons = wclistofweapons2;};
 	if (wcteamlevel == 3) then { wclistofweapons = wclistofweapons2;};
 	if (wcteamlevel == 2) then { wclistofweapons = wclistofweapons3;};
