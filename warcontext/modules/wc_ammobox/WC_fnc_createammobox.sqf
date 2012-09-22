@@ -36,6 +36,16 @@
 
 	_refreshtime = 1800; 
 	_crate allowDamage false;
+	
+	//Set weaponry by team rank! (rank 8 is worst rank, rank 1 is best - 5 is starting!)
+	if (wcteamlevel == 8) then { wclistofweapons = wclistofweapons0;};
+	if (wcteamlevel == 7) then { wclistofweapons = wclistofweapons0;};
+	if (wcteamlevel == 6) then { wclistofweapons = wclistofweapons1;};
+	if (wcteamlevel == 5) then { wclistofweapons = wclistofweapons3;};
+	if (wcteamlevel == 4) then { wclistofweapons = wclistofweapons2;};
+	if (wcteamlevel == 3) then { wclistofweapons = wclistofweapons2;};
+	if (wcteamlevel == 2) then { wclistofweapons = wclistofweapons3;};
+	if (wcteamlevel == 1) then { wclistofweapons = wclistofweapons3;};
 
 	while {true} do {
 		clearweaponcargo 	_crate;

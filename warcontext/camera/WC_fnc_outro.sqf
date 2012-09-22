@@ -38,7 +38,7 @@
 	wccam camCommit 0; 
 
 	_teampromote = localize format["STR_WC_TEAM%1", wcteamlevel];
-	_text = format["Congratulations.\nYou finish the campaign: War In %1: operation iron rains.\n\nYou win your tickets to return home after %2 days.\nYour team level was: %3", worldname, wcday, _teampromote];
+	_text = format["Congratulations!\nYou finished the campaign: War In %1: Operation Iron Rain.\n\nYou won your tickets to return home after %2 days of operations.\nYour team level was: %3", worldname, wcday, _teampromote];
 
 	titleText [_text, "BLACK FADED"];
 	sleep 6;		

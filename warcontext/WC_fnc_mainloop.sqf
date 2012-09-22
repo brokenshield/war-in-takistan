@@ -62,7 +62,7 @@
 		wcnumberofkilledofmissionE = 0;
 		wcnumberofkilledofmissionC = 0;
 		wcnumberofkilledofmissionV = 0;
-		wcteambonus = 0;
+		wcteambonus = 1;
 
 		_index = 0;
 		_ambushcounter = 0;
@@ -311,7 +311,7 @@
 
 		sleep 0.5;
 
-		// PRINT STATS BEFORE SANITING MAP
+		// PRINT STATS BEFORE SANITIZING MAP
 		wcmessageW = ["Casualty", format["%1 East soldiers killed", wcnumberofkilledofmissionE]];
 		if!(isDedicated) then { wcgarbage = wcmessageW spawn EXT_fnc_infotext; } else { ["wcmessageW", "client"] call WC_fnc_publicvariable;};
 
@@ -370,7 +370,7 @@
 		};
 
 		// SANITING MAP
-		diag_log "WARCONTEXT: MISSION FINISHED - SANITING MAP";
+		diag_log "WARCONTEXT: MISSION FINISHED - SANITIZING MAP";
 
 		{
 			_vehicle = _x;
@@ -507,6 +507,6 @@
 
 		wcalert = 0;
 		["wcalert", "client"] call WC_fnc_publicvariable;
-		diag_log "WARCONTEXT: SANITING: MISSION IS FINISHED";
+		diag_log "WARCONTEXT: SANITIZING: MISSION IS FINISHED";
 		sleep 60 + (random 120);
 	};

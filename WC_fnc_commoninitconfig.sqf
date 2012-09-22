@@ -159,7 +159,7 @@
 	wcseainitpos = [400,400,0];
 
 	// Rain max rate of the country - 0  (low) 1 (full)
-	wcrainrate = 0.65;
+	wcrainrate = 0.75;
 
 	// mortar spawn percent probability at begin of mission (defaut 20%)
 	wcmortarprobability = 0.2;
@@ -167,15 +167,21 @@
 	// civilian terrorist percent - depending of lobby parameter (by default 20% hostile)
 	wcterroristprobability = (wccivilianfame / 100);
 
-	// civilian driver percent (defaut 20%)
+	// civilian driver percent (default 20%)
 	wcciviliandriverprobability = 0.2;
 
 	// player can see marker of others player when they are at max x meters
-	wcplayermarkerdist = 2000;
+	wcplayermarkerdist = 2500;
 
-	// weapons list of ammobox, you can add weapons in this array to add then to main ammobox
-	wclistofweapons = ["M9","M9SD","Makarov","MakarovSD","M16A2","M16A2GL","M4A1","PK","SVD","M136","Javelin","Stinger","RPG7V","Strela","Igla","MetisLauncher","Binocular","Laserdesignator","NVGoggles","Colt1911","ksvk","m107","RPG18","AK_47_M","AK_47_S","AK_74","AK_74_GL","AKS_74_kobra","AKS_74_pso","AKS_74_U","RPK_74","m8_carbine","m8_carbineGL","m8_compact","m8_sharpshooter","m8_SAW","ItemWatch","ItemCompass","ItemGPS","ItemRadio","ItemMap","BAF_AS50_scoped","BAF_AS50_TWS","BAF_LRR_scoped","BAF_LRR_scoped_W","BAF_NLAW_Launcher","BAF_L85A2_RIS_Holo","BAF_L85A2_UGL_Holo","BAF_L85A2_RIS_SUSAT","BAF_L85A2_UGL_SUSAT","BAF_L85A2_RIS_ACOG","BAF_L85A2_UGL_ACOG","BAF_L85A2_RIS_CWS","BAF_L86A2_ACOG","BAF_L110A1_Aim","BAF_L7A2_GPMG","Sa61_EP1","UZI_EP1","UZI_SD_EP1","revolver_EP1","glock17_EP1","M60A4_EP1","Mk_48_DES_EP1","M249_EP1","M249_TWS_EP1","M249_m145_EP1","M24_des_EP1","SVD_des_EP1","SVD_NSPU_EP1","Sa58P_EP1","Sa58V_EP1","Sa58V_RCO_EP1","Sa58V_CCO_EP1","M4A3_CCO_EP1","M4A3_RCO_GL_EP1","Binocular_Vector","AK_74_GL_kobra","AKS_74","AKS_74_NSPU","AKS_74_GOSHAWK","FN_FAL","FN_FAL_ANPVS4","G36C_camo","G36_C_SD_camo","G36A_camo","G36K_camo","MG36_camo","M32_EP1","M79_EP1","Mk13_EP1","LeeEnfield","m107_TWS_EP1","M110_TWS_EP1","M110_NVG_EP1","M14_EP1","m240_scoped_EP1","M47Launcher_EP1","MAAWS","SCAR_L_CQC","SCAR_L_CQC_Holo","SCAR_L_STD_Mk4CQT","SCAR_L_STD_EGLM_RCO","SCAR_L_CQC_EGLM_Holo","SCAR_L_STD_EGLM_TWS","SCAR_L_STD_HOLO","SCAR_L_CQC_CCO_SD","SCAR_H_CQC_CCO","SCAR_H_CQC_CCO_SD","SCAR_H_STD_EGLM_Spect","SCAR_H_LNG_Sniper","SCAR_H_LNG_Sniper_SD","SCAR_H_STD_TWS_SD","AA12_PMC","m8_carbine_pmc","m8_compact_pmc","m8_holo_sd","m8_tws_sd","m8_tws"];
-
+	// weapons list of ammobox, you can add weapons in this array to add then to main ammobox (unlimited)
+	wclistofweapons3 = ["M9","M9SD","Makarov","MakarovSD","M16A2","M16A2GL","M4A1","PK","SVD","M136","Javelin","Stinger","RPG7V","Strela","Igla","MetisLauncher","Binocular","Laserdesignator","NVGoggles","Colt1911","ksvk","m107","RPG18","AK_47_M","AK_47_S","AK_74","AK_74_GL","AKS_74_kobra","AKS_74_pso","AKS_74_U","RPK_74","m8_carbine","m8_carbineGL","m8_compact","m8_sharpshooter","m8_SAW","ItemWatch","ItemCompass","ItemGPS","ItemRadio","ItemMap","BAF_AS50_scoped","BAF_AS50_TWS","BAF_LRR_scoped","BAF_LRR_scoped_W","BAF_NLAW_Launcher","BAF_L85A2_RIS_Holo","BAF_L85A2_UGL_Holo","BAF_L85A2_RIS_SUSAT","BAF_L85A2_UGL_SUSAT","BAF_L85A2_RIS_ACOG","BAF_L85A2_UGL_ACOG","BAF_L85A2_RIS_CWS","BAF_L86A2_ACOG","BAF_L110A1_Aim","BAF_L7A2_GPMG","Sa61_EP1","UZI_EP1","UZI_SD_EP1","revolver_EP1","glock17_EP1","M60A4_EP1","Mk_48_DES_EP1","M249_EP1","M249_TWS_EP1","M249_m145_EP1","M24_des_EP1","SVD_des_EP1","SVD_NSPU_EP1","Sa58P_EP1","Sa58V_EP1","Sa58V_RCO_EP1","Sa58V_CCO_EP1","M4A3_CCO_EP1","M4A3_RCO_GL_EP1","Binocular_Vector","AK_74_GL_kobra","AKS_74","AKS_74_NSPU","AKS_74_GOSHAWK","FN_FAL","FN_FAL_ANPVS4","G36C_camo","G36_C_SD_camo","G36A_camo","G36K_camo","MG36_camo","M32_EP1","M79_EP1","Mk13_EP1","LeeEnfield","m107_TWS_EP1","M110_TWS_EP1","M110_NVG_EP1","M14_EP1","m240_scoped_EP1","M47Launcher_EP1","MAAWS","SCAR_L_CQC","SCAR_L_CQC_Holo","SCAR_L_STD_Mk4CQT","SCAR_L_STD_EGLM_RCO","SCAR_L_CQC_EGLM_Holo","SCAR_L_STD_EGLM_TWS","SCAR_L_STD_HOLO","SCAR_L_CQC_CCO_SD","SCAR_H_CQC_CCO","SCAR_H_CQC_CCO_SD","SCAR_H_STD_EGLM_Spect","SCAR_H_LNG_Sniper","SCAR_H_LNG_Sniper_SD","SCAR_H_STD_TWS_SD","AA12_PMC","m8_carbine_pmc","m8_compact_pmc","m8_holo_sd","m8_tws_sd","m8_tws"];
+	// Partial unlock (somewhat limited - no TWS)
+	wclistofweapons2 = ["M9","M9SD","Makarov","MakarovSD","M16A2","M16A2GL","M4A1","PK","SVD","M136","Javelin","Stinger","RPG7V","Strela","Igla","MetisLauncher","Binocular","Laserdesignator","NVGoggles","Colt1911","ksvk","m107","RPG18","AK_47_M","AK_47_S","AK_74","AK_74_GL","AKS_74_kobra","AKS_74_pso","AKS_74_U","RPK_74","m8_carbine","m8_carbineGL","m8_compact","m8_sharpshooter","m8_SAW","ItemWatch","ItemCompass","ItemGPS","ItemRadio","ItemMap","BAF_AS50_scoped","BAF_LRR_scoped","BAF_LRR_scoped_W","BAF_NLAW_Launcher","BAF_L85A2_RIS_Holo","BAF_L85A2_UGL_Holo","BAF_L85A2_RIS_SUSAT","BAF_L85A2_UGL_SUSAT","BAF_L85A2_RIS_ACOG","BAF_L85A2_UGL_ACOG","BAF_L85A2_RIS_CWS","BAF_L86A2_ACOG","BAF_L110A1_Aim","BAF_L7A2_GPMG","Sa61_EP1","UZI_EP1","UZI_SD_EP1","revolver_EP1","glock17_EP1","M60A4_EP1","Mk_48_DES_EP1","M249_EP1","M249_m145_EP1","M24_des_EP1","SVD_des_EP1","SVD_NSPU_EP1","Sa58P_EP1","Sa58V_EP1","Sa58V_RCO_EP1","Sa58V_CCO_EP1","M4A3_CCO_EP1","M4A3_RCO_GL_EP1","Binocular_Vector","AK_74_GL_kobra","AKS_74","AKS_74_NSPU","AKS_74_GOSHAWK","FN_FAL","FN_FAL_ANPVS4","G36C_camo","G36_C_SD_camo","G36A_camo","G36K_camo","MG36_camo","M32_EP1","M79_EP1","Mk13_EP1","LeeEnfield","m107_TWS_EP1","M110_NVG_EP1","M14_EP1","m240_scoped_EP1","M47Launcher_EP1","MAAWS","SCAR_L_CQC","SCAR_L_CQC_Holo","SCAR_L_STD_Mk4CQT","SCAR_L_STD_EGLM_RCO","SCAR_L_CQC_EGLM_Holo","SCAR_L_STD_HOLO","SCAR_L_CQC_CCO_SD","SCAR_H_CQC_CCO","SCAR_H_CQC_CCO_SD","SCAR_H_STD_EGLM_Spect","SCAR_H_LNG_Sniper","SCAR_H_LNG_Sniper_SD","AA12_PMC","m8_carbine_pmc","m8_compact_pmc","m8_holo_sd"];
+	// Starting set (very limited), limited SD, sniper, AT no AKs
+	wclistofweapons1 = ["M9","M16A2","M136","Stinger","RPG7V","Binocular","Laserdesignator","NVGoggles","Colt1911","m8_carbine","m8_carbineGL","m8_compact","m8_sharpshooter","m8_SAW","ItemWatch","ItemCompass","ItemGPS","ItemRadio","ItemMap","glock17_EP1","M60A4_EP1","Mk_48_DES_EP1","M249_EP1","M249_m145_EP1","M24_des_EP1","Sa58P_EP1","Sa58V_EP1","Sa58V_RCO_EP1","Sa58V_CCO_EP1","M4A3_CCO_EP1","M4A3_RCO_GL_EP1","Binocular_Vector","G36C_camo","G36_C_SD_camo","G36A_camo","G36K_camo","MG36_camo","M32_EP1","M79_EP1","Mk13_EP1","LeeEnfield","M14_EP1","m240_scoped_EP1","M47Launcher_EP1","MAAWS"];	
+	// Fail weapons!
+	wclistofweapons0 = ["M9","M16A2","Stinger","Binocular","Laserdesignator","NVGoggles","Colt1911","ItemWatch","ItemCompass","ItemGPS","ItemRadio","ItemMap","M60A4_EP1","Mk_48_DES_EP1","M249_EP1","M249_m145_EP1","M24_des_EP1","M4A3_CCO_EP1","M4A3_RCO_GL_EP1","Binocular_Vector","MG36_camo","M32_EP1","M79_EP1","Mk13_EP1","LeeEnfield","M14_EP1","m240_scoped_EP1","M47Launcher_EP1","MAAWS"];
+	
 	// Kind of commander
 	wccommanderclass = ["US_Delta_Force_TL_EP1","USMC_Soldier_Officer","FR_Commander","CZ_Soldier_Office_DES_EP1","UN_CDF_Soldier_Officer_EP1","BAF_Soldier_TL_MTP","BAF_Soldier_Officer_MTP","BAF_Soldier_Officer_DDPM","Soldier_TL_PMC","LIN_Officer","FR_TL","FR_AC","GER_Soldier_TL_EP1","ibr_venator_leader"];
 	
@@ -272,10 +278,10 @@
 	wcgravetype = ["gravecross2_EP1", "GraveCrossHelmet_EP1"];
 
 	// terrain ground details 0(full) - 50(low)
-	wcterraingrid = 50;
+	wcterraingrid = 60;
 
 	// default player view distance
-	wcviewdist = 1500;
+	wcviewdist = 2000;
 
 	// Radio appear at x meter distance of goal (min & max)
 	wcradiodistminofgoal = 150;
@@ -295,7 +301,7 @@
 	wctimetogarbagedeadbody = 360;
 
 	// time in seconds before to respawn vehicle
-	wctimetorespawnvehicle = 360;
+	wctimetorespawnvehicle = 600;
 
 	// probability of nuclear attack at begining of a mission - default 25%
 	wcnuclearprobability = 0.85;
