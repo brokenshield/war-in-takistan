@@ -55,7 +55,7 @@ class RscDisplayMission
 		{
 			idc = 1600;
 		
-			text = "Validate";
+			text = "Select";
 			x = 0.663526 * safezoneW + safezoneX;
 			y = 0.862 * safezoneH + safezoneY;
 			w = 0.141702 * safezoneW;
@@ -76,7 +76,7 @@ class RscDisplayMission
 		{
 			idc = 1601;
 		
-			text = "Recompute";
+			text = "Shuffle";
 			x = 0.50 * safezoneW + safezoneX;
 			y = 0.862 * safezoneH + safezoneY;
 			w = 0.141702 * safezoneW;
