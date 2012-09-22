@@ -21,6 +21,7 @@ class Mission
 		"CAWheeled_E_LandRover",
 		"CAWheeled_E_ATV",
 		"caweapons_pmc",
+		"warfarebuildings",
 		"ibr_lingor",
 		"ibr_police",
 		"Lingor_Army",
@@ -2988,7 +2989,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="preset";
-			init="this allowDamage false; this addAction [""<t color='#FFFFFF'>Get Equipment Preset</t>"",""extern\bon_loadoutpresets\bon_loadout_presets.sqf""];";
+			init="this allowDamage false; this addAction [""<t color='#FFFFFF'>Choose BackPack</t>"",""extern\bon_getbackpack\openmenu.sqf""];";
 		};
 		class Item138
 		{

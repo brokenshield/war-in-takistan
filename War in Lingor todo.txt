@@ -1,6 +1,7 @@
 
 1. Add in Civilian reporter faction - base them in a town with a reporter's van :) <- DONE
-2. Add in friendly generation script for friendly forces
+2. Add in friendly generation script for friendly forces <-- bodged!
 3. Correct remaining English mistakes in stringtable <- DONE
 4. Correct mission name generator file
 5. Remove ibr_drug_lord from random unit creation! <- DONE
+6. Have vehicles locked until certain scores received

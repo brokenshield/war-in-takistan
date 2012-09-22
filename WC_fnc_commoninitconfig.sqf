@@ -240,6 +240,9 @@
 	//wcaavehicles = ["ZU23_TK_GUE_EP1", "Ural_ZU23_TK_GUE_EP1"];
 	wcaavehicles = ["zsu57_ARL", "Ural_ZU23_INS"];
 
+	// vehicles escorted in convoy
+	wcconvoyvehicles = ["UralReammo_TK_EP1", "UralRefuel_TK_EP1", "UralRepair_TK_EP1", "UralSalvage_TK_EP1", "UralSupply_TK_EP1"];
+
 	// sea patrol
 	wcseapatrol = ["PBX","ibr_gunboat_arl"];
 
