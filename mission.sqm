@@ -615,7 +615,7 @@ class Mission
 					vehicle="US_Delta_Force_Night_EP1";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupid [""Alphal""];";
+					init="this setGroupid [""Alpha""];";
 					description="Alpha 3: US-SFOD Engineer";
 				};
 				class Item3

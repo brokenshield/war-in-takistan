@@ -223,7 +223,8 @@
 	wcunisolforces = ["ibr_cyborg", "ibr_cyborg2","ibr_scientist","ibr_scientist2","ibr_bodyguard"];
 
 	// Kind of friendlies
-	wcfriendlyforces = ["ibr_cop1", "ibr_cop2", "ibr_cop3", "ibr_cop4"];
+	wcfriendlyforces = ["ibr_cop1", "ibr_cop2", "ibr_cop3", "ibr_cop4", "ibr_fea", "ibr_fea2"];
+	wcfriendlyforcesmil = ["LIN_Officer", "LIN_Soldier_Medic", "LIN_Soldier_Engineer", "LIN_Rifleman", "LIN_Soldier_GL", "LIN_Soldier_Sniper", "LIN_Soldier_Spotter", "LIN_Soldier_MG", "LIN_Soldier_AR", "LIN_Soldier_AT", "LIN_Soldier_LAT", "LIN_Soldier_HAT", "LIN_Soldier_AA", "LIN_Medic"];
 
 	// kind of civil for rescue missions
 	//wcrescuecivils = ["TK_CIV_Takistani01_EP1", "TK_CIV_Takistani02_EP1", "TK_CIV_Takistani03_EP1", "TK_CIV_Takistani04_EP1", "TK_CIV_Takistani05_EP1", "TK_CIV_Takistani06_EP1", "TK_CIV_Worker01_EP1", "TK_CIV_Worker02_EP1"];
