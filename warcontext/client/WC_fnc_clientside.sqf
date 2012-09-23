@@ -179,12 +179,20 @@
 					_teampromote = localize format["STR_WC_TEAM%1", wcteamlevel];
 					_message =[localize "STR_WC_MESSAGETEAMPROMOTED", format["to %1 !", _teampromote]];
 					wcgarbage = _message spawn EXT_fnc_infotext;
+					
+					//Refresh ammocrate
+					wcgarbage = [(getmarkerpos "crate1"), "base"] spawn WC_fnc_createammobox;
+					
 				} else {
 					_oldlevel = wcteamlevel;
 					playsound "drum";
 					_teampromote = localize format["STR_WC_TEAM%1", wcteamlevel];
 					_message =[localize "STR_WC_MESSAGETEAMDEGRADED", format["to %1 !", _teampromote]];
 					wcgarbage =  _message spawn EXT_fnc_infotext;
+
+					//Refresh ammocrate
+					wcgarbage = [(getmarkerpos "crate1"), "base"] spawn WC_fnc_createammobox;
+					
 				};
 			};
 			sleep 5;
@@ -225,7 +233,7 @@
 			if (rating player < 0) then {
 				if(driver(vehicle player) == player) then {
 					player addrating (rating player * -1);
-					wcgarbage = ["You have got a blame"] call BIS_fnc_dynamicText;
+					wcgarbage = ["You have been blamed"] call BIS_fnc_dynamicText;
 					wctk = name player;
 					["wctk", "server"] call WC_fnc_publicvariable;
 				};
@@ -269,7 +277,7 @@
 				sleep 0.1;
 			}foreach playableUnits;
 			if(wcbonus > 10000) then {
-				_message =["You have win", "10 points Teamplay bonus"];
+				_message =["You have won", "10 point Teamplay bonus"];
 				wcgarbage = _message spawn EXT_fnc_infotext;
 				wcbonus = 0;
 				wcplayeraddscore = [player, 10];
