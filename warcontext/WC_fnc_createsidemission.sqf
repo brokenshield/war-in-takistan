@@ -1281,6 +1281,21 @@
 			wcbonusfame = 0;			
 		};	
 		
+		case 84: {
+			_missiontext = [_missionname, "Secure a Control Tower"];
+			_vehicle = (nearestObjects [_position, ["Land_Mil_ControlTower_EP1", "Land_Mil_ControlTower"], 400]) call BIS_fnc_selectRandom;
+			_position = position _vehicle;
+			_group = createGroup west;
+			{
+				_unit = _group createUnit [_x, _position, [], 20, "NONE"];
+			}foreach ["ibr_cop1", "ibr_cop2", "ibr_cop3", "ibr_cop4"];
+			wcgarbage = [_group, 50] spawn WC_fnc_patrol;
+			(leader _group) setVehicleInit "this addAction ['<t color=''#ff4500''>Replace the guard</t>', 'warcontext\actions\WC_fnc_dobeginguard.sqf',[],6,false];";
+			processInitCommands;
+			_missiontype = "defend";
+			wcbonusfame = 0;			
+		};	
+	
 		case 100: {
 			_missiontext = [_missionname," Kill the enemy leader"];
 			_vehicle = imam;

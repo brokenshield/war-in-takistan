@@ -35,7 +35,7 @@
 	_thislist = [];
 
 	// Add a mission? Increment this!
-	_maxnumberofmission = 82;
+	_maxnumberofmission = 83;
 
 	if(wclevel < 10) then {
 		_countofmission = 1 + ceil(random 10);
@@ -90,7 +90,7 @@
 		_thislist = _thislist + [_missionnumber];
 
 		// defend mission
-		if((_missionnumber == 55) or (_missionnumber == 56)) then {_numberofgroup = 0; _numberofvehicle = 0;};
+		if((_missionnumber == 55) or (_missionnumber == 56) or (_missionnumber == 63) or (_missionnumber == 77)) then {_numberofgroup = 0; _numberofvehicle = 0;};
 
 		if(_missionnumber == 56) then {
 			_vehicle = (nearestObjects [getmarkerpos "respawn_west", ["Land_Mil_Barracks_i_EP1"], 20000]) call BIS_fnc_selectRandom;
@@ -120,6 +120,11 @@
 				};
 				sleep 0.1;
 			};
+		};
+
+		if(_missionnumber == 77) then {
+			_vehicle = (nearestObjects [getmarkerpos "respawn_west", ["Land_Mil_ControlTower_EP1", "Land_Mil_ControlTower"], 20000]) call BIS_fnc_selectRandom;
+			_position = position _vehicle;
 		};
 
 		if((_missionnumber == 63) or (_missionnumber == 72)) then {

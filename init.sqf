@@ -232,6 +232,10 @@
 	WC_fnc_nuclearnuke		= compile preprocessFile "warcontext\modules\wc_nuke\WC_fnc_nuclearnuke.sqf";
 	WC_fnc_radiationzone		= compile preprocessFile "warcontext\modules\wc_nuke\WC_fnc_radiationzone.sqf";
 
+	// WHEN PLAYER IS KILLED
+	WC_fnc_onkilled			= compile preprocessFile "warcontext\modules\wc_onkilled\WC_fnc_onkilled.sqf";
+	WC_fnc_restoreactionmenu	= compile preprocessFile "warcontext\modules\wc_onkilled\WC_fnc_restoreactionmenu.sqf";
+
 	// RANKING
 	WC_fnc_playerranking		= compile preprocessFile "warcontext\modules\wc_ranking\WC_fnc_playerranking.sqf";
 	WC_fnc_playerscore		= compile preprocessFile "warcontext\modules\wc_ranking\WC_fnc_playerscore.sqf";
@@ -240,6 +244,7 @@
 	WC_fnc_respawnvehicle		= compile preprocessFile "warcontext\modules\wc_respawnvehicle\WC_fnc_respawnvehicle.sqf";
 
 	// ROAD PATROL
+	WC_fnc_roadpatrol 		= compile preprocessFile "warcontext\modules\wc_roadpatrols\WC_fnc_roadpatrol.sqf";
 	WC_fnc_createconvoy 		= compile preprocessFile "warcontext\modules\wc_roadpatrols\WC_fnc_createconvoy.sqf";
 
 	// SABOTAGE
@@ -293,8 +298,6 @@
 	WC_fnc_debug			= compile preprocessFile "warcontext\WC_fnc_debug.sqf";
 	WC_fnc_eventhandler 		= compile preprocessFile "warcontext\WC_fnc_eventhandler.sqf";
 	WC_fnc_mainloop 		= compile preprocessFile "warcontext\WC_fnc_mainloop.sqf";
-	WC_fnc_onkilled			= compile preprocessFile "warcontext\WC_fnc_onkilled.sqf";
-	WC_fnc_restoreactionmenu	= compile preprocessFile "warcontext\WC_fnc_restoreactionmenu.sqf";
 
 	//////////////
 	// CLIENT SIDE

@@ -102,6 +102,7 @@ STR_WC_MISSION80,	"We have learned that the rebels intend to attack and seize on
 STR_WC_MISSION81,	"We have learned of a drug deal going down with experimental new drugs. Steal the drugs!"	"We have learned of a drug deal going down with experimental new drugs. Steal the drugs!"
 STR_WC_MISSION82,	"We have learned that the rebels intend to attack our base FOB Eddie! We cannot allow it to fall! Defend it at all costs! To activate the mission, soldiers must go to the flag, activate the mission and protect the zone for a period of time"	"We have learned that the rebels intend to attack and seize one of the Radio Telescopes. We cannot allow that to happen! Defend it at all costs!"
 STR_WC_MISSION83,	"We have learned that the rebels intend to attack and seize one of the network of Radio Telescopes. We cannot allow that to happen! Defend it at all costs! To activate the mission, soldiers must go to the flag, activate the mission and protect the zone for a period of time"	"We have learned that the rebels intend to attack and seize one of the Radio Telescopes. We cannot allow that to happen! Defend it at all costs!"
+STR_WC_MISSION84,	"We need to guard a control tower. One of our group is already guarding it, talk with the leader and replace them",	"Nous avons besoin de garder une tour de controle. Un de nos groupes est déjà en place, parlez avec le chef, et prenez la garde"
 STR_WC_MISSION100,	"Final mission: Intel have identified where the enemy leader is based. Your mission is to kill him as we we believe this will stop the war. Good luck!",	"Final mission: Vous avez decouvert l'endroit ou se cache le leader enemi. Vous devez le tuer pour arreter la guerre. Bonne chance !"
 STR_WCSHORT_MISSION0,	"Destroy a SCUD launcher",	"Destroy a SCUD launcher"
 STR_WCSHORT_MISSION1,	"Kill a drug trafficker",	"Kill a gold trafficker"
@@ -187,6 +188,7 @@ STR_WCSHORT_MISSION80,	"Defend the Presidential Palace",	"Defend the Presidentia
 STR_WCSHORT_MISSION81,	"Steal drugs",	"Steal drugs",
 STR_WCSHORT_MISSION82,	"Defend FOB Eddie",	"Defend FOB Eddie",
 STR_WCSHORT_MISSION83,	"Defend the Radio Telescope",	"Defend the Radio Telescope",
+STR_WCSHORT_MISSION84,	"Guard a control tower",	"Gardez une tour de controle"
 STR_WCSHORT_MISSION100,	"Final: Kill the leader",	"Final: Kill the leader"
 STR_WC_TITLE_MISSION,	"War in Lingor: Operation Iron Rain",	"War in Lingor: Operations pluies d'acier"
 STR_WC_CALLREINFORCEMENT,	"Incoming reinforcements",	"Des renforts attaquent"

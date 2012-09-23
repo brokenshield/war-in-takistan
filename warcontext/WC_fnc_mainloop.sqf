@@ -123,7 +123,7 @@
 		// Check if we are in town or not
 		_buildings = nearestObjects [position _location, ["house"] , wcdistance];
 		if (count _buildings < wcminimunbuildings) then { 
-			wcgarbage = [_location] call WC_fnc_computeavillage;
+			wcgarbage = [_location, wcvillagehouses] call WC_fnc_computeavillage;
 			wcgarbage = [_location] spawn WC_fnc_popcivilian;
 		};
 
@@ -193,7 +193,7 @@
 
 		// CREATE x CONVOY ON MAP
 		for "_x" from 1 to wcconvoylevel step 1 do {
-			wcgarbage = [] spawn WC_fnc_createconvoy;
+			wcgarbage = [wcvehicleslistE, wcconvoyvehicles, (round random(3))] spawn WC_fnc_createconvoy;
 			sleep 2;
 		};
 

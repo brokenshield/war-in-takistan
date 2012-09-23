@@ -17,7 +17,7 @@
 		player addaction ["<t color='#dddd00'>Unflip Vehicle</t>","warcontext\actions\WC_fnc_dounflipvehicle.sqf",[],-1,false];
 	};
 
-	// Admin menu
+	// Admin menu 
 	if (wcadmin) then {
 		wcbombingsupport = nil;
 		wccancelmission = nil;
