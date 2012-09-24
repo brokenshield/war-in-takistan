@@ -115,7 +115,7 @@
 		"Shy",
 		"Sleepy",
 		"Stupid",
-		"super",
+		"Super",
 		"Talented",
 		"Tame",
 		"Tender",

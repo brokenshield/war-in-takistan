@@ -61,11 +61,13 @@ class Mission
 		"cawheeled_pmc",
 		"ibr_vblvab",
 		"lingor_objects",
-		"ca_pmc"
+		"ca_pmc",
+		"CAAir2_UH1Y",
+		"ind_tank",
+		"castructures_e_misc_misc_construction"
 	};
 	addOnsAuto[]=
 	{
-		"takistan",
 		"ca_modules_functions",
 		"ibr_police",
 		"ibr_unisolcorp",
@@ -111,13 +113,15 @@ class Mission
 		"cawheeled_pmc",
 		"lingor_objects",
 		"ca_pmc",
+		"ind_tank",
+		"castructures_e_misc_misc_construction",
 		"ibr_lingor"
 	};
 	randomSeed=4546277;
 	class Intel
 	{
 		briefingName="WAR IN LINGOR 1.6 15-09-2012";
-		briefingDescription=War Context and War in Takistan by code34. Adapted for Lingor Island by slerbal.;
+		briefingDescription="War Context and War in Takistan by code34. Adapted for Lingor Island by slerbal.";
 		resistanceWest=0;
 		resistanceEast=1;
 		startWeather=0.0099999905;
@@ -1576,30 +1580,10 @@ class Mission
 				};
 			};
 		};
-		class Item46
-		{
-			side="CIV";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2963.6892,13.290792,6268.978};
-					id=968;
-					side="CIV";
-					vehicle="ibr_van_AMB";
-					player="PLAY CDG";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="Lingor_Medic";
-				};
-			};
-		};
 	};
 	class Vehicles
 	{
-		items=893;
+		items=922;
 		class Item0
 		{
 			position[]={3051.8882,14.073066,6454.8398};
@@ -3478,7 +3462,7 @@ class Mission
 		};
 		class Item187
 		{
-			position[]={2986.198,21.73992,7321.3154};
+			position[]={3371.0146,15.406232,6101.0527};
 			azimut=173.442;
 			id=196;
 			side="EMPTY";
@@ -10213,6 +10197,291 @@ class Mission
 			text="flag_prison_1";
 			init="this allowDamage false;";
 		};
+		class Item893
+		{
+			position[]={942.9082,5.9915962,9225.8945};
+			azimut=82.987;
+			id=968;
+			side="EMPTY";
+			vehicle="Mass_grave";
+			skill=0.60000002;
+			text="grave_1";
+		};
+		class Item894
+		{
+			position[]={944.99512,5.9915962,9233.3223};
+			azimut=82.987;
+			id=969;
+			side="EMPTY";
+			vehicle="Land_Ind_TankSmall";
+			skill=0.60000002;
+		};
+		class Item895
+		{
+			position[]={938.711,5.9915962,9219.9951};
+			azimut=210;
+			id=970;
+			side="EMPTY";
+			vehicle="Misc_TyreHeap";
+			skill=0.60000002;
+		};
+		class Item896
+		{
+			position[]={940.62634,5.9915962,9229.7715};
+			azimut=320;
+			id=971;
+			side="EMPTY";
+			vehicle="Mass_grave";
+			skill=0.60000002;
+		};
+		class Item897
+		{
+			position[]={937.47913,5.9915962,9225.543};
+			azimut=82.987;
+			id=972;
+			side="EMPTY";
+			vehicle="Land_Fire_burning";
+			skill=0.60000002;
+		};
+		class Item898
+		{
+			position[]={948.22205,5.9915962,9228.626};
+			azimut=82.987;
+			id=973;
+			side="EMPTY";
+			vehicle="Land_Fire_burning";
+			skill=0.60000002;
+		};
+		class Item899
+		{
+			position[]={946.85138,5.9915962,9221.749};
+			azimut=82.987;
+			id=974;
+			side="EMPTY";
+			vehicle="Land_Fire_burning";
+			skill=0.60000002;
+		};
+		class Item900
+		{
+			position[]={3609.9541,26.999603,6460.3965};
+			azimut=173.442;
+			id=975;
+			side="EMPTY";
+			vehicle="FlagCarrierNATO_EP1";
+			skill=0.60000002;
+			text="flag_nato_1";
+			init="this allowDamage false;";
+		};
+		class Item901
+		{
+			position[]={3121.5627,6.9446802,5879.7764};
+			azimut=173.442;
+			id=976;
+			side="EMPTY";
+			vehicle="FlagCarrierNATO_EP1";
+			skill=0.60000002;
+			text="flag_nato_2";
+			init="this allowDamage false;";
+		};
+		class Item902
+		{
+			position[]={941.52094,5.9915962,9221.251};
+			azimut=73.40873;
+			id=977;
+			side="EMPTY";
+			vehicle="Mass_grave";
+			skill=0.60000002;
+		};
+		class Item903
+		{
+			position[]={951.06952,5.9915962,9223.3574};
+			azimut=315;
+			id=978;
+			side="EMPTY";
+			vehicle="Land_Misc_Rubble_EP1";
+			skill=0.60000002;
+		};
+		class Item904
+		{
+			position[]={937.948,5.9915962,9222.4473};
+			azimut=82.987;
+			id=979;
+			side="EMPTY";
+			vehicle="Mass_grave";
+			skill=0.60000002;
+			text="grave_1_1";
+		};
+		class Item905
+		{
+			position[]={947.95251,5.9915962,9231.7803};
+			azimut=82.987;
+			id=980;
+			side="EMPTY";
+			vehicle="Mass_grave";
+			skill=0.60000002;
+			text="grave_1_2";
+		};
+		class Item906
+		{
+			position[]={944.70929,5.9915962,9229.0742};
+			azimut=82.987;
+			id=981;
+			side="EMPTY";
+			vehicle="Land_Fire_barrel";
+			skill=0.60000002;
+		};
+		class Item907
+		{
+			position[]={944.45709,5.9915962,9220.1621};
+			azimut=82.987;
+			id=982;
+			side="EMPTY";
+			vehicle="Land_Fire_barrel";
+			skill=0.60000002;
+		};
+		class Item908
+		{
+			position[]={930.8374,5.9915962,9217.8086};
+			azimut=82.987;
+			id=983;
+			side="EMPTY";
+			vehicle="Land_Fire_barrel";
+			skill=0.60000002;
+		};
+		class Item909
+		{
+			position[]={921.00098,5.9915962,9212.2588};
+			azimut=82.987;
+			id=984;
+			side="EMPTY";
+			vehicle="Land_Fire_barrel";
+			skill=0.60000002;
+		};
+		class Item910
+		{
+			position[]={3036.3518,14.180219,6530.3525};
+			azimut=356.43399;
+			id=985;
+			side="EMPTY";
+			vehicle="ibr_as350_pol";
+			lock="LOCKED";
+			skill=0.60000002;
+			text="US30_1_1";
+		};
+		class Item911
+		{
+			position[]={3036.3518,14.180219,6530.3525};
+			azimut=356.43399;
+			id=986;
+			side="EMPTY";
+			vehicle="ibr_as350_pol";
+			lock="LOCKED";
+			skill=0.60000002;
+			text="US30_1_2";
+		};
+		class Item912
+		{
+			position[]={3036.3518,14.180219,6530.3525};
+			azimut=356.43399;
+			id=987;
+			side="EMPTY";
+			vehicle="ibr_as350_pol";
+			lock="LOCKED";
+			skill=0.60000002;
+			text="US30_1_3";
+		};
+		class Item913
+		{
+			position[]={3036.3518,14.180219,6530.3525};
+			azimut=356.43399;
+			id=988;
+			side="EMPTY";
+			vehicle="ibr_as350_pol";
+			lock="LOCKED";
+			skill=0.60000002;
+			text="US30_1_4";
+		};
+		class Item914
+		{
+			position[]={926.15619,5.9915962,9213.9756};
+			azimut=180;
+			id=989;
+			side="EMPTY";
+			vehicle="ibr_as350_pol";
+			lock="LOCKED";
+			skill=0.60000002;
+			text="US30_1_5";
+		};
+		class Item915
+		{
+			position[]={947.30762,5.9915962,9224.4785};
+			azimut=82.987;
+			id=990;
+			side="EMPTY";
+			vehicle="Mass_grave";
+			skill=0.60000002;
+			text="grave_1_3";
+		};
+		class Item916
+		{
+			position[]={937.53955,5.9915962,9228.7285};
+			azimut=82.987;
+			id=991;
+			side="EMPTY";
+			vehicle="Mass_grave";
+			skill=0.60000002;
+			text="grave_1_4";
+		};
+		class Item917
+		{
+			position[]={942.9082,5.9915962,9218.5127};
+			azimut=82.987;
+			id=992;
+			side="EMPTY";
+			vehicle="Mass_grave";
+			skill=0.60000002;
+			text="grave_1_5";
+		};
+		class Item918
+		{
+			position[]={952.07971,5.9915962,9230.0703};
+			azimut=82.987;
+			id=993;
+			side="EMPTY";
+			vehicle="Mass_grave";
+			skill=0.60000002;
+			text="grave_1_6";
+		};
+		class Item919
+		{
+			position[]={943.05737,5.9915962,9234.4697};
+			azimut=82.987;
+			id=994;
+			side="EMPTY";
+			vehicle="Mass_grave";
+			skill=0.60000002;
+			text="grave_1_7";
+		};
+		class Item920
+		{
+			position[]={936.12286,5.9915962,9224.8516};
+			azimut=82.987;
+			id=995;
+			side="EMPTY";
+			vehicle="Mass_grave";
+			skill=0.60000002;
+			text="grave_1_8";
+		};
+		class Item921
+		{
+			position[]={953.27283,5.9915962,9226.6406};
+			azimut=82.987;
+			id=996;
+			side="EMPTY";
+			vehicle="Mass_grave";
+			skill=0.60000002;
+			text="grave_1_9";
+		};
 	};
 	class Markers
 	{
@@ -10547,10 +10816,8 @@ class Mission
 		{
 			position[]={7133.7046,333.00479,4881.752};
 			a=5;
-
 			b=5;
 			angle=-7.0861096;
-
 			activationBy="ANY";
 			repeating=1;
 			interruptable=1;
@@ -10574,8 +10841,6 @@ class Mission
 			age="UNKNOWN";
 			expActiv="gate4 animate [""Bargate"", 0]";
 			expDesactiv="gate4 animate [""Bargate"", 1]";
-
-
 			class Effects
 			{
 			};
@@ -10585,8 +10850,6 @@ class Mission
 			position[]={7044.2622,330.61841,4955.7979};
 			a=6;
 			b=40;
-
-
 			angle=110.079;
 			rectangular=1;
 			activationBy="WEST";
@@ -10595,7 +10858,6 @@ class Mission
 			age="UNKNOWN";
 			expActiv="gate5 animate [""Bargate"", 0]";
 			expDesactiv="gate5 animate [""Bargate"", 1]";
-
 			class Effects
 			{
 			};
@@ -10605,8 +10867,6 @@ class Mission
 			position[]={7042.0752,331.10776,4919.5879};
 			a=1;
 			b=3;
-
-
 			angle=285.66125;
 			rectangular=1;
 			activationBy="WEST";
@@ -10614,8 +10874,6 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expActiv="man9 SwitchMove ""ActsPsitMstpSnonWnonDnon_varSittingOnTheWall""; man9 disableAI ""ANIM"";man10 SwitchMove ""AidlPercSnonWnonDnon_talk1""; man10 disableAI ""ANIM"";  ";
-
-
 			class Effects
 			{
 			};

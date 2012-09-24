@@ -1180,7 +1180,7 @@
 				_unit = _group createUnit [_type, _position, [], 0.8, "NONE"];
 				_count = _count + 1;				
 			};	
-			wcgarbage = [_friendlyspawn, 50] spawn WC_fnc_patrol;	
+			wcgarbage = [_friendlyspawn, 500] spawn WC_fnc_patrol;	
 			
 			diag_log format ["WARCONTEXT: CREATING FRIENDLY PATROL (MILTARY)"];
 			_group = createGroup west;
@@ -1190,7 +1190,7 @@
 				_unit = _group createUnit [_type, _position, [], 0.9, "NONE"];
 				_count = _count + 1;				
 			};				
-			wcgarbage = [_friendlyspawn, 50] spawn WC_fnc_patrol;			
+			wcgarbage = [_friendlyspawn, 300] spawn WC_fnc_patrol;			
 			
 			//SPAWN FACILITY STAFF
 			diag_log format ["WARCONTEXT: CREATING CIVILIANS"];
@@ -1204,7 +1204,7 @@
 				removeallweapons _unit;
 				_count = _count + 1;				
 			};
-			wcgarbage = [_friendlyspawn, 50] spawn WC_fnc_patrol;			
+			wcgarbage = [_friendlyspawn, 100] spawn WC_fnc_patrol;			
 			//END SPAWN FACILITY STAFF	
 			
 			wcgarbage = [_vehicle] spawn WC_fnc_defend;
@@ -1256,7 +1256,7 @@
 					_unit = _group createUnit [_type, _position, [], 0.9, "NONE"];
 					_count = _count + 1;				
 				};		
-				wcgarbage = [_friendlyspawn, 50] spawn WC_fnc_patrol;		
+				wcgarbage = [_friendlyspawn, 500] spawn WC_fnc_patrol;		
 				_groupcount = _groupcount + 1;
 			};
 			
@@ -1278,7 +1278,7 @@
 				_unit = _group createUnit [_type, _position, [], 0.8, "NONE"];
 				_count = _count + 1;				
 			};	
-			wcgarbage = [_vehicle, 50] spawn WC_fnc_patrol;
+			wcgarbage = [_vehicle, 300] spawn WC_fnc_patrol;
 			
 			//SPAWN FACILITY STAFF
 			diag_log format ["WARCONTEXT: CREATING CIVILIANS"];
@@ -1290,7 +1290,7 @@
 				removeallweapons _unit;
 				_count = _count + 1;				
 			};
-			wcgarbage = [_vehicle, 50] spawn WC_fnc_patrol;
+			wcgarbage = [_vehicle, 100] spawn WC_fnc_patrol;
 			//END SPAWN FACILITY STAFF		
 			
 			wcgarbage = [_vehicle] spawn WC_fnc_securezone;

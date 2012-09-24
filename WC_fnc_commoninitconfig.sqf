@@ -209,7 +209,7 @@
 	wccivilwithoutweapons = ["ibr_lingorman1","ibr_lingorman2","ibr_lingorman3","ibr_lingorman4","ibr_lingorman5","ibr_lingorman6","ibr_lingorman7","ibr_lingorman1s","ibr_lingorman2s","ibr_lingorman3s","ibr_lingorman4s","ibr_lingorman5s","ibr_lingorman6s","ibr_lingorman7s","Functionary1", "Functionary2","Damsel1","Damsel2","Damsel3","Damsel4","Damsel5","Hooker1","Hooker2","Hooker3","Hooker4","Hooker5"];
 
 	// blacklist of units that can pop dynamicly (exclude mission)
-	wcblacklistenemyclass = ["TK_Soldier_Crew_EP1", "TK_Aziz_EP1", "TK_Special_Forces_EP1", "TK_Special_Forces_MG_EP1", "TK_Special_Forces_TL_EP1", "TK_Soldier_Pilot_EP1"];
+	wcblacklistenemyclass = ["TK_Soldier_Crew_EP1", "TK_Aziz_EP1", "TK_Special_Forces_EP1", "TK_Special_Forces_MG_EP1", "TK_Special_Forces_TL_EP1", "TK_Soldier_Pilot_EP1", "ibr_drg_lord"];
 
 	// blacklist of vehicles that can pop dynamicly (exclude mission)
 	wcblacklistenemyvehicleclass = ["BRDM2_ATGM_TK_EP1","GRAD_TK_EP1", "BMP2_HQ_TK_EP1"];
