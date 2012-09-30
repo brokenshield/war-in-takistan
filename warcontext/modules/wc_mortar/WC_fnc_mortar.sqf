@@ -4,6 +4,11 @@
 
 	private [
 		"_arrayofvehicle",
+		"_cible",
+		"_knowsabout",
+		"_cooldown",
+		"_cooldownmax",
+		"_check",
 		"_enemy", 
 		"_enemys", 
 		"_friendlyunits", 
@@ -11,10 +16,10 @@
 		"_hour",
 		"_marker",
 		"_mortarposition",
+		"_impactposition",
 		"_position", 
 		"_unit", 
 		"_vehicle", 
-		"_vehicle",
 		"_wallposition",
 		"_wall"
 	];
@@ -36,53 +41,56 @@
 
 	_dir = getdir _vehicle;
 	_wall setdir _dir;	
-
-	{_unit removeMagazine _x} forEach magazines _unit;
 	_enemys = [];
 
-	while {(alive _vehicle)} do {
-		if(count(crew _vehicle) > 0) then {
-			_enemys = nearestObjects [position _unit, ["Man"], 800];
-			{
-				if (side _x in wcenemyside) then {
-					_enemys = _enemys - [_x];
-				};
-			}foreach _enemys;
-	
-			{
-				_enemy = _x;
-				if(_unit knowsAbout _enemy > 0.5) then {
-					_unit dowatch _enemy;
-					_position = [0,0,0];
-					if(_enemy distance _unit < 800) then {
-						while { [_position select 0, _position select 1] distance [(position _enemy select 0), (position _enemy select 1)] > 100 } do {
-							_position = [(position _enemy), 100] call WC_fnc_createpositionaround;
-							_friendlyunits = nearestObjects [_position, ["Man", "LandVehicle"], 50];
-							{
-								if((side _x) in wcenemyside) then {
-									_position = [0,0,0];
-								};
-							}foreach _friendlyunits;
-							sleep 0.05;
-						};
-						if(random 1 > 0.3) then {
-							if(wcwithACE == 1) then {
-								"ACE_ARTY_Sh_82_HE" createVehicle _position;
-							} else {
-								"ARTY_Sh_82_HE" createVehicle _position;
-							};
+	_check = true;
+	_cooldown = 0;
+	_cooldownmax = round (random 6);
+
+	while {_check} do {
+		if(!(alive _vehicle) or (damage _vehicle > 0.9))then {
+			_check = false;
+		};
+
+		if(count(crew _vehicle) == 0) then {
+			_check = false;
+			_vehicle setdamage 1;
+		};
+
+		if(_cooldown > _cooldownmax) then {
+			if(count wcmortarposition > 0) then {
+				_position = wcmortarposition select 0;
+				wcmortarposition set [0,-1]; 
+				wcmortarposition = wcmortarposition - [-1];
+				_unit dowatch _position;
+				_position = [_position, 0, 55] call WC_fnc_createpositionaround;
+				if(_position distance _unit < 800) then {
+					if(random 1 > 0.3) then {
+						if(wcwithACE == 1) then {
+							"ACE_ARTY_Sh_82_HE" createVehicle _position;
 						} else {
-							if(wcwithACE == 1) then {
-								"ACE_ARTY_SmokeShellWhite" createVehicle position _enemy;
-							} else {
-								"ARTY_SmokeShellWhite" createVehicle position _enemy;
-							};					
+							"ARTY_Sh_82_HE" createVehicle _position;
 						};
-						sleep (15 + random 20);
+					} else {
+						if(wcwithACE == 1) then {
+							"ACE_ARTY_SmokeShellWhite" createVehicle _position;
+						} else {
+							"ARTY_SmokeShellWhite" createVehicle _position;
+						};					
 					};
 				};
-				sleep 5;
-			}foreach _enemys;
+			};
+			_cooldown = 0;
+			_cooldownmax = round (random 3);
+		} else {
+			if(_knowsabout > 0) then {
+				_unit dowatch _enemy;
+			};
 		};
-		sleep 2;
+		sleep 5;
+		_cooldown = _cooldown + 1;
+	};
+
+	if(alive _unit) then {
+		wcgarbage = [group _unit, wcdistance] spawn WC_fnc_patrol;
 	};
