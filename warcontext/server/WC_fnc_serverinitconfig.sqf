@@ -94,6 +94,23 @@
 		wcmissiondone = wcmissiondone + [77];
 	};
 	
+	// For Lingor Missions!
+	wcallflag_gal = nearestObjects [wcmapcenter, wckindofflag_gal, 20000];
+	if(count(wcallflag_gal) == 0) then {
+		wcmissiondone = wcmissiondone + [80];
+	};
+
+	wcallflag_nato = nearestObjects [wcmapcenter, wckindofflag_nato, 20000];
+	if(count(wcallflag_nato) == 0) then {
+		wcmissiondone = wcmissiondone + [82];
+	};	
+
+	wcalltelescope = nearestObjects [wcmapcenter, wckindoftelescope, 20000];
+	if(count(wcalltelescope) == 0) then {
+		wcmissiondone = wcmissiondone + [83];
+	};		
+	
+	
 	// enemy zone size
 	wcdistancegrowth = 10;
 	wcdistance = 200 + (wclevel * wcdistancegrowth);

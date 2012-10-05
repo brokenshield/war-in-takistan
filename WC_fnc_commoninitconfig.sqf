@@ -258,6 +258,11 @@
 	// kind of fuel station
 	wckindoffuelstations = ["Land_Ind_FuelStation_Feed_EP1"];
 	
+	// kind of Lingor objects!
+	wckindofflag_gal = ["flag_gal"];
+	wckindofflag_nato = ["FlagCarrierNATO_EP1"];
+	wckindoftelescope = ["Land_MBG_Radiotelescope"];
+	
 	// anti air vehicles
 	//wcaavehicles = ["ZU23_TK_GUE_EP1", "Ural_ZU23_TK_GUE_EP1"];
 	wcaavehicles = ["zsu57_ARL", "Ural_ZU23_INS"];

@@ -83,14 +83,10 @@
 		} else {
 			_missionnumber = 100;
 		};
-<<<<<<< HEAD
 		
 		//DEBUG: Choose a specific mission to test here!
 		//_missionnumber = 83;
-		
-=======
-		_missionnumber = 58;
->>>>>>> origin/1.6
+
 		_thislist = _thislist + [_missionnumber];
 
 		// Compute name of mission

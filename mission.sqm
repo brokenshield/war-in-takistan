@@ -1748,7 +1748,7 @@ class Mission
 			id=16;
 			side="EMPTY";
 			vehicle="LIN_UH1";
-			lock="LOCKED";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			text="US30";
 		};
@@ -1759,7 +1759,7 @@ class Mission
 			id=17;
 			side="EMPTY";
 			vehicle="AH64D_EP1";
-			lock="LOCKED";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			text="US29";
 		};
@@ -3817,7 +3817,7 @@ class Mission
 			id=274;
 			side="EMPTY";
 			vehicle="ibr_as350_pol";
-			lock="LOCKED";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			text="US30_1";
 		};
@@ -9609,7 +9609,7 @@ class Mission
 			id=900;
 			side="EMPTY";
 			vehicle="AV8B2";
-			lock="LOCKED";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			text="US31";
 		};
@@ -9620,7 +9620,7 @@ class Mission
 			id=901;
 			side="EMPTY";
 			vehicle="A10";
-			lock="LOCKED";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			text="US32";
 		};
@@ -9641,7 +9641,7 @@ class Mission
 			id=903;
 			side="EMPTY";
 			vehicle="CH_47F_EP1";
-			lock="LOCKED";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			text="US33";
 		};
@@ -9809,7 +9809,7 @@ class Mission
 			id=926;
 			side="EMPTY";
 			vehicle="F35B";
-			lock="LOCKED";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			text="US31_1";
 		};
@@ -9820,7 +9820,7 @@ class Mission
 			id=927;
 			side="EMPTY";
 			vehicle="ibr_a4";
-			lock="LOCKED";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			text="US31_2";
 		};
@@ -9865,7 +9865,7 @@ class Mission
 			id=931;
 			side="EMPTY";
 			vehicle="AH64D_EP1";
-			lock="LOCKED";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			text="US29_1";
 		};
@@ -9933,7 +9933,7 @@ class Mission
 			id=938;
 			side="EMPTY";
 			vehicle="AH64D_EP1";
-			lock="LOCKED";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			text="US29_1_1";
 		};
@@ -9944,7 +9944,7 @@ class Mission
 			id=939;
 			side="EMPTY";
 			vehicle="UH60M_EP1";
-			lock="LOCKED";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			text="US30_2";
 		};
