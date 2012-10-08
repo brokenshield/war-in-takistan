@@ -85,8 +85,9 @@
 			_position = _arrayofpos call BIS_fnc_selectRandom;
 			_vehicle setpos _position;
 			_vehicle setUnitPos "Up"; 
-			dostop _vehicle;
+			_vehicle stop true;
 			wcgarbage = [_vehicle, wcskill] spawn WC_fnc_setskill;
+			wcgarbage = [_vehicle] spawn WC_fnc_protectobject;
 			_missiontype = "eliminate";
 			wcbonusfame = -0.1;
 		};
@@ -123,8 +124,9 @@
 			_position = _arrayofpos call BIS_fnc_selectRandom;
 			_vehicle setpos _position;
 			_vehicle setUnitPos "Up"; 
-			dostop _vehicle;
+			_vehicle stop true;
 			wcgarbage = [_vehicle, wcskill] spawn WC_fnc_setskill;
+			wcgarbage = [_vehicle] spawn WC_fnc_protectobject;
 			_missiontype = "eliminate";
 			wcbonusfame = -0.1;
 		};
@@ -192,8 +194,9 @@
 			_position = _arrayofpos call BIS_fnc_selectRandom;
 			_vehicle setpos _position;
 			_vehicle setUnitPos "Up"; 
-			dostop _vehicle;
+			_vehicle stop true;
 			wcgarbage = [_vehicle, wcskill] spawn WC_fnc_setskill;
+			wcgarbage = [_vehicle] spawn WC_fnc_protectobject;
 			_missiontype = "eliminate";
 			wcbonusfame = 0.1;
 		};
@@ -252,7 +255,6 @@
 		case 12: {
 			_missiontext = [_missionname,"Destroy a mercenary group"];
 			_vehicle = createVehicle ["Mi17_TK_EP1", _position, [], 0, "NONE"];
-			_camo = createVehicle ["Land_CamoNetB_EAST_EP1", [0,0,0], [], 0, "NONE"];
 			_camo allowdammage false;
 			_camo setdir getdir _vehicle;
 			_camo setpos (position _vehicle);
@@ -309,8 +311,9 @@
 			_position = _arrayofpos call BIS_fnc_selectRandom;
 			_vehicle setpos _position;
 			_vehicle setUnitPos "Up"; 
-			dostop _vehicle;
+			_vehicle stop true;
 			wcgarbage = [_vehicle, wcskill] spawn WC_fnc_setskill;
+			wcgarbage = [_vehicle] spawn WC_fnc_protectobject;
 			_missiontype = "eliminate";
 			wcbonusfame = 0;
 		};
@@ -372,7 +375,7 @@
 			_position = _arrayofpos call BIS_fnc_selectRandom;
 			_vehicle setpos _position;
 			_vehicle setUnitPos "Up"; 
-			dostop _vehicle;
+			_vehicle stop true;
 			wcgarbage = [_vehicle, wcskill] spawn WC_fnc_setskill;
 			wcgarbage = [_vehicle] spawn WC_fnc_createied;
 			_missiontype = "eliminate";
@@ -415,8 +418,9 @@
 			_position = _arrayofpos call BIS_fnc_selectRandom;
 			_vehicle setpos _position;
 			_vehicle setUnitPos "Up"; 
-			dostop _vehicle;
+			_vehicle stop true;
 			wcgarbage = [_vehicle, wcskill] spawn WC_fnc_setskill;
+			wcgarbage = [_vehicle] spawn WC_fnc_protectobject;
 			_missiontype = "eliminate";
 			wcbonusfame = 0.1;
 		};
@@ -455,8 +459,9 @@
 			_position = _arrayofpos call BIS_fnc_selectRandom;
 			_vehicle setpos _position;
 			_vehicle setUnitPos "Up"; 
-			dostop _vehicle;
+			_vehicle stop true;
 			wcgarbage = [_vehicle, wcskill] spawn WC_fnc_setskill;
+			wcgarbage = [_vehicle] spawn WC_fnc_protectobject;
 			_missiontype = "eliminate";
 			wcbonusfame = -0.1;
 		};
@@ -795,7 +800,7 @@
 			_position = _arrayofpos call BIS_fnc_selectRandom;
 			_vehicle setpos _position;
 			_vehicle setUnitPos "Up"; 
-			dostop _vehicle;
+			_vehicle stop true;
 			wcgarbage = [_vehicle, wcskill] spawn WC_fnc_setskill;
 			_missiontype = "eliminate";
 			wcbonusfame = -0.1;
@@ -880,7 +885,8 @@
 				removeallweapons _unit;
 				_count = _count + 1;				
 			};
-			wcgarbage = [_vehicle, 50] spawn WC_fnc_patrol;
+			//wcgarbage = [_vehicle, 50] spawn WC_fnc_patrol;
+			wcgarbage = [_vehicle, (position(leader _vehicle)), 50] spawn WC_fnc_patrol;
 			//END SPAWN FACILITY STAFF	
 			
 			wcgarbage = [_vehicle] spawn WC_fnc_defend;
@@ -1046,7 +1052,8 @@
 				removeallweapons _unit;
 				_count = _count + 1;				
 			};
-			wcgarbage = [_vehicle, 50] spawn WC_fnc_patrol;
+			//wcgarbage = [_vehicle, 50] spawn WC_fnc_patrol;
+			wcgarbage = [_vehicle, (position(leader _vehicle)), 50] spawn WC_fnc_patrol;
 			//END SPAWN FACILITY STAFF				
 			
 			wcgarbage = [_vehicle] spawn WC_fnc_securezone;
@@ -1180,7 +1187,8 @@
 				_unit = _group createUnit [_type, _position, [], 0.8, "NONE"];
 				_count = _count + 1;				
 			};	
-			wcgarbage = [_friendlyspawn, 500] spawn WC_fnc_patrol;	
+			//wcgarbage = [_friendlyspawn, 500] spawn WC_fnc_patrol;
+			wcgarbage = [_friendlyspawn, (position(leader _friendlyspawn)), 500] spawn WC_fnc_patrol;	
 			
 			diag_log format ["WARCONTEXT: CREATING FRIENDLY PATROL (MILTARY)"];
 			_group = createGroup west;
@@ -1190,7 +1198,8 @@
 				_unit = _group createUnit [_type, _position, [], 0.9, "NONE"];
 				_count = _count + 1;				
 			};				
-			wcgarbage = [_friendlyspawn, 300] spawn WC_fnc_patrol;			
+			//wcgarbage = [_friendlyspawn, 300] spawn WC_fnc_patrol;
+			wcgarbage = [_friendlyspawn, (position(leader _friendlyspawn)), 300] spawn WC_fnc_patrol;			
 			
 			//SPAWN FACILITY STAFF
 			diag_log format ["WARCONTEXT: CREATING CIVILIANS"];
@@ -1204,7 +1213,8 @@
 				removeallweapons _unit;
 				_count = _count + 1;				
 			};
-			wcgarbage = [_friendlyspawn, 100] spawn WC_fnc_patrol;			
+			//wcgarbage = [_friendlyspawn, 100] spawn WC_fnc_patrol;	
+			wcgarbage = [_friendlyspawn, (position(leader _friendlyspawn)), 100] spawn WC_fnc_patrol;		
 			//END SPAWN FACILITY STAFF	
 			
 			wcgarbage = [_vehicle] spawn WC_fnc_defend;
@@ -1256,7 +1266,8 @@
 					_unit = _group createUnit [_type, _position, [], 0.9, "NONE"];
 					_count = _count + 1;				
 				};		
-				wcgarbage = [_friendlyspawn, 500] spawn WC_fnc_patrol;		
+				//wcgarbage = [_friendlyspawn, 500] spawn WC_fnc_patrol;	
+				wcgarbage = [_friendlyspawn, (position(leader _friendlyspawn)), 100] spawn WC_fnc_patrol;	
 				_groupcount = _groupcount + 1;
 			};
 			
@@ -1278,7 +1289,8 @@
 				_unit = _group createUnit [_type, _position, [], 0.8, "NONE"];
 				_count = _count + 1;				
 			};	
-			wcgarbage = [_vehicle, 300] spawn WC_fnc_patrol;
+			//wcgarbage = [_vehicle, 300] spawn WC_fnc_patrol;
+			wcgarbage = [_vehicle, (position(leader _vehicle)), 300] spawn WC_fnc_patrol;
 			
 			//SPAWN FACILITY STAFF
 			diag_log format ["WARCONTEXT: CREATING CIVILIANS"];
@@ -1290,7 +1302,8 @@
 				removeallweapons _unit;
 				_count = _count + 1;				
 			};
-			wcgarbage = [_vehicle, 100] spawn WC_fnc_patrol;
+			//wcgarbage = [_vehicle, 100] spawn WC_fnc_patrol;
+			wcgarbage = [_vehicle, (position(leader _vehicle)), 100] spawn WC_fnc_patrol;
 			//END SPAWN FACILITY STAFF		
 			
 			wcgarbage = [_vehicle] spawn WC_fnc_securezone;
@@ -1306,7 +1319,7 @@
 			{
 				_unit = _group createUnit [_x, _position, [], 20, "NONE"];
 			}foreach ["ibr_cop1", "ibr_cop2", "ibr_cop3", "ibr_cop4"];
-			wcgarbage = [_group, 50] spawn WC_fnc_patrol;
+			wcgarbage = [_group, (position(leader _group)), 50] spawn WC_fnc_patrol;
 			(leader _group) setVehicleInit "this addAction ['<t color=''#ff4500''>Replace the guard</t>', 'warcontext\actions\WC_fnc_dobeginguard.sqf',[],6,false];";
 			processInitCommands;
 			_missiontype = "defend";
@@ -1316,7 +1329,6 @@
 		case 100: {
 			_missiontext = [_missionname," Kill the enemy leader"];
 			_vehicle = imam;
-			_vehicle allowdammage true;
 			_vehicle addweapon "AKS_74";
 			_vehicle addmagazine "30Rnd_545x39_AK";
 			_vehicle addEventHandler ['Fired', '(_this select 0) setvehicleammo 1;'];
@@ -1328,8 +1340,9 @@
 			_vehicle setpos _position;
 			_vehicle setvehicleinit "this allowdammage true;";
 			processInitCommands;
-			wcgarbage = [(group _vehicle), 300] spawn WC_fnc_patrol;
+			wcgarbage = [_group, (position(leader _group)), wcdistance] spawn WC_fnc_patrol;
 			wcgarbage = [_vehicle, wcskill] spawn WC_fnc_setskill;
+			wcgarbage = [_vehicle] spawn WC_fnc_protectobject;
 			_missiontype = "eliminate";
 			wcbonusfame = 0;
 		};
