@@ -16,12 +16,12 @@
 	_oldscore = score player;
 
 	_ranked = [
-		15, // Corporal
-		30, // Sergeant
-		45, // Lieutenant
-		60, // Captain
-		75, // Major
-		90 // Colonel
+		8, // Corporal was 15
+		15, // Sergeant was 30
+		25, // Lieutenant was 45
+		45, // Captain was 60
+		70, // Major was 75
+		90 // Colonel was 90
 	];
 
 	while { true } do {

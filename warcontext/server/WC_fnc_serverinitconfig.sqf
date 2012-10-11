@@ -211,7 +211,7 @@
 	wcleveltoadd = 0;
 
 	// score initialisation
-	wcteamscore = 0;
+	wcteamscore = 10;
 
 	// ups initialisation
 	wcblinde = [];

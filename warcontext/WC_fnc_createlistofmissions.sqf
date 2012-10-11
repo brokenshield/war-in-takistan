@@ -207,21 +207,21 @@
 			case 80: {
 				_numberofgroup = 5; 
 				_numberofvehicle = 5;
-				_vehicle = wckindofflag_gal call BIS_fnc_selectRandom;
+				_vehicle = wcallflag_gal call BIS_fnc_selectRandom;
 				_position = position _vehicle;
 			};	
 
 			case 82: {
 				_numberofgroup = 14; 
 				_numberofvehicle = 10;
-				_vehicle = wckindofflag_nato call BIS_fnc_selectRandom;
+				_vehicle = wcallflag_nato call BIS_fnc_selectRandom;
 				_position = position _vehicle;
 			};	
 
 			case 83: {
 				_numberofgroup = 8; 
 				_numberofvehicle = 1;		
-				_vehicle = wckindoftelescope call BIS_fnc_selectRandom;
+				_vehicle = wcalltelescope call BIS_fnc_selectRandom;
 				_position = position _vehicle;
 			};
 

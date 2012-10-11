@@ -183,16 +183,16 @@
 	wclistofweapons0 = ["M9","M16A2","Stinger","Binocular","Laserdesignator","NVGoggles","Colt1911","ItemWatch","ItemCompass","ItemGPS","ItemRadio","ItemMap","M60A4_EP1","Mk_48_DES_EP1","M249_EP1","M249_m145_EP1","M24_des_EP1","M4A3_CCO_EP1","M4A3_RCO_GL_EP1","Binocular_Vector","MG36_camo","M32_EP1","M79_EP1","Mk13_EP1","LeeEnfield","M14_EP1","m240_scoped_EP1","M47Launcher_EP1","MAAWS"];
 	
 	// Kind of commander
-	wccommanderclass = ["US_Delta_Force_TL_EP1","USMC_Soldier_Officer","FR_Commander","CZ_Soldier_Office_DES_EP1","UN_CDF_Soldier_Officer_EP1","BAF_Soldier_TL_MTP","BAF_Soldier_Officer_MTP","BAF_Soldier_Officer_DDPM","Soldier_TL_PMC","LIN_Officer","FR_TL","FR_AC","GER_Soldier_TL_EP1","ibr_venator_leader"];
+	wccommanderclass = ["US_Delta_Force_TL_EP1","USMC_Soldier_Officer","FR_Commander","CZ_Soldier_Office_DES_EP1","UN_CDF_Soldier_Officer_EP1","BAF_Soldier_TL_MTP","BAF_Soldier_Officer_MTP","BAF_Soldier_Officer_DDPM","Soldier_TL_PMC","LIN_Officer","FR_TL","FR_AC","GER_Soldier_TL_EP1","ibr_venator_leader","Ry_PMC","US_Soldier_Officer_EP1","BAF_Soldier_FAC_MTP"];
 	
 	// Kind of pilot
 	wcpilotclass = ["USMC_Soldier_Pilot", "US_Soldier_Pilot_EP1","US_Pilot_Light_EP1","CZ_Soldier_Pilot_EP1","UN_CDF_Soldier_Pilot_EP1","BAF_Pilot_MTP","BAF_Pilot_DDPM","Soldier_Pilot_PMC","LIN_Soldier_Pilot"];
 	
 	// Kind of engineer
-	wcengineerclass = ["AFR_Soldier_Engineer", "ACE_USMC_SoldierS_Engineer_D", "HEXA_Soldier_ISAf", "US_Soldier_Engineer_EP1", "BWMod_EngineerG", "BWMod_EngineerG_Desert", "BWMod_EngineerG_ISAF", "US_Soldier_Engineer_EP1_retex_ger_des", "US_Soldier_Engineer_EP1_retex_ger_wdl", "FR_Sykes", "FR_Sapper", "US_Delta_Force_Night_EP1", "LIN_Soldier_Engineer", "GER_Soldier_Scout_EP1", "BAF_Soldier_EN_MTP", "ibr_venator_m16", "ibr_fea"];
+	wcengineerclass = ["AFR_Soldier_Engineer", "ACE_USMC_SoldierS_Engineer_D", "HEXA_Soldier_ISAf", "US_Soldier_Engineer_EP1", "BWMod_EngineerG", "BWMod_EngineerG_Desert", "BWMod_EngineerG_ISAF", "US_Soldier_Engineer_EP1_retex_ger_des", "US_Soldier_Engineer_EP1_retex_ger_wdl", "FR_Sykes", "FR_Sapper", "US_Delta_Force_Night_EP1", "LIN_Soldier_Engineer", "GER_Soldier_Scout_EP1", "BAF_Soldier_EN_MTP", "ibr_venator_m16", "ibr_fea","Tanny_PMC"];
 
 	// Kind of medics
-	wcmedicclass = ["AFR_Soldier_Medic", "ACE_USMC_Soldier_Medic_D", "HEXA_Soldier_ISAF_Medic", "FR_OHara", "USMC_Soldier_Medic", "GER_Soldier_Medic_EP1", "US_Delta_Force_Medic_EP1", "US_Soldier_Medic_EP1", "BWMod_MedicG", "BWMod_MedicG_Desert", "BWMod_MedicG_ISAF", "US_Delta_Force_Medic_EP1_retex_ger_des", "US_Soldier_Medic_EP1_retex_ger_des", "US_Delta_Force_Medic_EP1_retex_ger_wdl", "US_Soldier_Medic_EP1_retex_ger_wdl", "GER_Soldier_Medic_EP1_des", "GER_Soldier_Medic_EP1_wdl", "RU_Soldier_Medic", "Dr_Hladik_EP1", "LIN_Soldier_Medic", "ibr_paramedic","ibr_cop4","FR_Corpsman"];
+	wcmedicclass = ["AFR_Soldier_Medic", "ACE_USMC_Soldier_Medic_D", "HEXA_Soldier_ISAF_Medic", "FR_OHara", "USMC_Soldier_Medic", "GER_Soldier_Medic_EP1", "US_Delta_Force_Medic_EP1", "US_Soldier_Medic_EP1", "BWMod_MedicG", "BWMod_MedicG_Desert", "BWMod_MedicG_ISAF", "US_Delta_Force_Medic_EP1_retex_ger_des", "US_Soldier_Medic_EP1_retex_ger_des", "US_Delta_Force_Medic_EP1_retex_ger_wdl", "US_Soldier_Medic_EP1_retex_ger_wdl", "GER_Soldier_Medic_EP1_des", "GER_Soldier_Medic_EP1_wdl", "RU_Soldier_Medic", "Dr_Hladik_EP1", "LIN_Soldier_Medic", "ibr_paramedic","ibr_cop4","FR_Corpsman","Dixon_PMC"];
 	
 	// Kind of engineer
 	//wcengineerclass = ["AFR_Soldier_Engineer", "ACE_USMC_SoldierS_Engineer_D", "HEXA_Soldier_ISAf", "US_Soldier_Engineer_EP1", "BWMod_EngineerG", "BWMod_EngineerG_Desert", "BWMod_EngineerG_ISAF", "US_Soldier_Engineer_EP1_retex_ger_des", "US_Soldier_Engineer_EP1_retex_ger_wdl", "FR_Sykes", "US_Delta_Force_Night_EP1"];

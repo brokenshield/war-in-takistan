@@ -506,12 +506,12 @@ class Mission
 					special="CARGO";
 					id=258;
 					side="WEST";
-					vehicle="FR_Commander";
+					vehicle="US_Soldier_Officer_EP1";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					init="this setGroupid [""Zebra""];removeAllWeapons this; this addMagazine ""30Rnd_556x45_G36SD""; this addMagazine ""15Rnd_9x19_M9SD""; this addWeapon ""G36_C_SD_camo""; this addWeapon ""glock17_EP1""; this addWeapon ""Binocular_Vector""; this addWeapon ""NVGoggles""; this addMagazine ""30Rnd_556x45_G36SD""; this addMagazine ""30Rnd_556x45_G36SD""; this addMagazine ""30Rnd_556x45_G36SD""; this addMagazine ""30Rnd_556x45_G36SD""; this addMagazine ""30Rnd_556x45_G36SD""; this addMagazine ""30Rnd_556x45_G36SD""; this addMagazine ""30Rnd_556x45_G36SD""; this addMagazine ""30Rnd_556x45_G36SD""; this addMagazine ""15Rnd_9x19_M9SD""; this addMagazine ""15Rnd_9x19_M9SD""; this addMagazine ""15Rnd_9x19_M9SD""; this addMagazine ""15Rnd_9x19_M9SD""; this addMagazine ""SmokeShell""; this addMagazine ""SmokeShell""; this addWeapon ""ItemGPS""; this addWeapon ""ItemCompass""; this addWeapon ""ItemMap""; this addWeapon ""ItemRadio""; this addWeapon ""ItemWatch"";";
-					description="Zebra 1: Commander Task Force Delta-14 (USMC-FR)";
+					description="Zebra 1: Commander Task Force Delta-14 (US Army)";
 				};
 				class Item1
 				{
@@ -520,11 +520,11 @@ class Mission
 					special="CARGO";
 					id=262;
 					side="WEST";
-					vehicle="FR_AC";
+					vehicle="BAF_Soldier_FAC_MTP";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupid [""Zebra""];";
-					description="Zebra 2: Deputy Commander (USMC-FR FAC)";
+					description="Zebra 2: Deputy Commander (British Army)";
 				};
 			};
 		};
@@ -541,12 +541,12 @@ class Mission
 					special="CARGO";
 					id=259;
 					side="WEST";
-					vehicle="USMC_Soldier_Pilot";
+					vehicle="US_Soldier_Pilot_EP1";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					init="this setGroupid [""Headhunter""];";
-					description="Headhunter 1: Flight Leader (USMC Pilot)";
+					description="Headhunter 1: Flight Leader (US Pilot)";
 				};
 				class Item1
 				{
@@ -959,12 +959,12 @@ class Mission
 					special="CARGO";
 					id=248;
 					side="WEST";
-					vehicle="FR_TL";
+					vehicle="Ry_PMC";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					init="this setGroupid [""Golf""];";
-					description="Golf 1: USMC-FR Team Leader";
+					description="Golf 1: Asano PMC/ION Team Leader";
 				};
 				class Item1
 				{
@@ -973,11 +973,11 @@ class Mission
 					special="CARGO";
 					id=249;
 					side="WEST";
-					vehicle="FR_Corpsman";
+					vehicle="Dixon_PMC";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupid [""Golf""];";
-					description="Golf 2: USMC-FR Corpsman (Medic)";
+					description="Golf 2: Dixon PMC/ION Medic";
 				};
 				class Item2
 				{
@@ -986,11 +986,11 @@ class Mission
 					special="CARGO";
 					id=250;
 					side="WEST";
-					vehicle="FR_AR";
+					vehicle="Poet_PMC";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupid [""Golf""];";
-					description="Golf 3: USMC-FR Heavy Gunner";
+					description="Golf 3: Poet PMC/ION Merc";
 				};
 				class Item3
 				{
@@ -999,11 +999,11 @@ class Mission
 					special="CARGO";
 					id=251;
 					side="WEST";
-					vehicle="FR_Sapper";
+					vehicle="Reynolds_PMC";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupid [""Golf""];";
-					description="Golf 4: USMC-FR Demo Spec";
+					description="Golf 4: Reynolds PMC/ION Merc";
 				};
 				class Item4
 				{
@@ -1012,11 +1012,11 @@ class Mission
 					special="CARGO";
 					id=252;
 					side="WEST";
-					vehicle="FR_Marksman";
+					vehicle="Tanny_PMC";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupid [""Golf""];";
-					description="Golf 5: USMC-FR Marksman";
+					description="Golf 5: Tanny PMC/ION Demo";
 				};
 			};
 		};

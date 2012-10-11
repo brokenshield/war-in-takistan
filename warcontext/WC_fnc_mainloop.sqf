@@ -62,7 +62,7 @@
 		wcnumberofkilledofmissionE = 0;
 		wcnumberofkilledofmissionC = 0;
 		wcnumberofkilledofmissionV = 0;
-		wcteambonus = 1;
+		wcteambonus = 0;
 
 		_index = 0;
 		_ambushcounter = 0;
