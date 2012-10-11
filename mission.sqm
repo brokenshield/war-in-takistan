@@ -9841,7 +9841,7 @@ class Mission
 			special="FLY";
 			id=929;
 			side="EMPTY";
-			vehicle="M1A2_TUSK_MG";
+			vehicle="M1A2_US_TUSK_MG_EP1";
 			leader=1;
 			skill=0.60000002;
 			text="US24_2";
