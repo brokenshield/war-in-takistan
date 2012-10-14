@@ -298,15 +298,15 @@
 			while { true } do {
 				if(wcteamplayscore > 29) then {
 					wcgarbage = ["Share points", format[localize "STR_WC_TRANSFERTPOINT",wcteamplayscore], localize "STR_WC_SHAREPOINTS", 10] spawn WC_fnc_playerhint;
-					sleep 10;
+					sleep 120;
 				} else {
 					if(wcteamplayscore > 19) then {
 						wcgarbage = ["Share points", format[localize "STR_WC_TRANSFERTPOINT",wcteamplayscore], localize "STR_WC_SHAREPOINTS", 10] spawn WC_fnc_playerhint;
-						sleep 30;
+						sleep 120;
 					} else {
 						if(wcteamplayscore > 9) then {
 							wcgarbage = ["Share points", format[localize "STR_WC_TRANSFERTPOINT",wcteamplayscore], localize "STR_WC_SHAREPOINTS", 10] spawn WC_fnc_playerhint;
-							sleep 60;
+							sleep 120;
 						} else {
 							if(wcteamplayscore > 0) then {
 								wcgarbage = ["Share points", format[localize "STR_WC_TRANSFERTPOINT",wcteamplayscore], localize "STR_WC_SHAREPOINTS", 10] spawn WC_fnc_playerhint;
