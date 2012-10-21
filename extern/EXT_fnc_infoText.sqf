@@ -1,5 +1,6 @@
 	//	File: infoText.sqf
-	//	Author: Karel Moricky - reworked by code34 for warcontext
+	//	Author: Karel Moricky 
+	// 	Reworked by code34 for warcontext
 	// 	Description: Info with some effects.
 
 	private [
@@ -15,7 +16,6 @@
 	waituntil {wccanwriteinfotext};
 	wccanwriteinfotext = false;
 
-	//3100 cutrsc ["rscInfoText","plain"];
 	10200 cutrsc ["infomission","PLAIN"];
 
 	// add info text to warcontext logs
@@ -40,8 +40,7 @@
 		{_textArrayTemp = _textArrayTemp + [tostring [_x]]} foreach _line;
 		_textArrayLines set [_i,_textArrayTemp];
 	};
-	
-	
+
 	//--- Merge arrays
 	_textArray = [];
 	_emptyArray = [];
@@ -60,8 +59,7 @@
 	} foreach _textArrayLines;
 	_finalArray = _emptyArray;
 	_text = composetext _finalArray;
-	
-	
+
 	//--- Random order
 	_nArray = [];
 	while {count _nArrayTemp > 0} do {
@@ -83,28 +81,39 @@
 	_textControl ctrlSetFontHeight 0.04;
 	_textControl ctrlcommit 0.01;
 	
+	//{
+	//	_finalArray set [_x,_textArray select _x];
+	//	_text = composetext _finalArray;
+	//	_textControl ctrlsettext str _text;
+	//	_textControl ctrlcommit 0.01;
+	//	sleep 0.01;
+	//} foreach _nArray;
+
+	_text = "";
 	{
-		_finalArray set [_x,_textArray select _x];
-		_text = composetext _finalArray;
-		_textControl ctrlsettext str _text;
+		{
+			_text = _text + _x;
+			_textControl ctrlsettext (_text + "|");
+			_textControl ctrlcommit 0.01;
+			sleep 0.05;
+		} foreach _x;
+		_textControl ctrlsettext _text;
 		_textControl ctrlcommit 0.01;
-		sleep 0.01;
-	} foreach _nArray;
+		sleep 0.05;
+		_text = _text + "\n";
+	} foreach _textArrayLines;
 	
-	sleep 6;
-	
+	sleep 8;
 	
 	//--- Fade away
-	{
-		_finalArray set [_x," "];
-		_text = composetext _finalArray;
-		_textControl ctrlsettext str _text;
-		_textControl ctrlcommit 0.01;
-		sleep 0.01;
-	} foreach _nArray;
+	//{
+	//	_finalArray set [_x," "];
+	//	_text = composetext _finalArray;
+	//	_textControl ctrlsettext str _text;
+	//	_textControl ctrlcommit 0.01;
+	//	sleep 0.01;
+	//} foreach _nArray;
 	
-	
-	//3100 cuttext ["","plain"];
 	10200 cuttext ["","plain"];
 	
 	wccanwriteinfotext = true;

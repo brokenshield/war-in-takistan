@@ -159,7 +159,7 @@
 	wcseainitpos = [400,400,0];
 
 	// Rain max rate of the country - 0  (low) 1 (full)
-	wcrainrate = 0.75;
+	wcrainrate = 0.80;
 
 	// mortar spawn percent probability at begin of mission (defaut 20%)
 	wcmortarprobability = 0.2;
@@ -305,7 +305,7 @@
 	wcterraingrid = 60;
 
 	// default player view distance
-	wcviewdist = 2000;
+	wcviewdist = 3500;
 
 	// Radio appear at x meter distance of goal (min & max)
 	wcradiodistminofgoal = 150;
