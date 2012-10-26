@@ -405,7 +405,12 @@
 		"Freezing",
 		"Hot",
 		"Warm",
-		"Wet"
+		"Wet",
+		"Corrupt",
+		"Flaming",
+		"Magic",
+		"Steel",
+		"Transhuman"
 	];
 
 	_name = [
@@ -661,7 +666,16 @@
 		"Window",
 		"Wing",
 		"Wire",
-		"Worm"
+		"Worm",
+		"Dragon",
+		"Griffin",
+		"Wyvern",
+		"Emperor",
+		"Duke",
+		"Baron",
+		"Centurion",
+		"Consul",
+		"Tribune"
 	];
 
 	_missionname = "Operation " + (_adjective call BIS_fnc_selectRandom) + " "+ (_name call BIS_fnc_selectRandom);

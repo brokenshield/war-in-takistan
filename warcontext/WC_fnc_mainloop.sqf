@@ -303,22 +303,22 @@
 		sleep 0.5;
 
 		// PRINT STATS BEFORE SANITIZING MAP
-		wcmessageW = ["Casualty", format["%1 East soldiers killed", wcnumberofkilledofmissionE]];
+		wcmessageW = ["Casualty Report:", format["%1 East soldiers killed", wcnumberofkilledofmissionE]];
 		if!(isDedicated) then { wcgarbage = wcmessageW spawn EXT_fnc_infotext; } else { ["wcmessageW", "client"] call WC_fnc_publicvariable;};
 
 		sleep 0.5;
 
-		wcmessageW = ["Casualty", format["%1 West soldiers killed", wcnumberofkilledofmissionW]];
+		wcmessageW = ["Casualty Report:", format["%1 West soldiers killed", wcnumberofkilledofmissionW]];
 		if!(isDedicated) then { wcgarbage = wcmessageW spawn EXT_fnc_infotext; } else { ["wcmessageW", "client"] call WC_fnc_publicvariable;};
 
 		sleep 0.5;
 
-		wcmessageW = ["Casualty", format["%1 Civils killed", wcnumberofkilledofmissionC]];
+		wcmessageW = ["Casualty Report:", format["%1 Civils killed", wcnumberofkilledofmissionC]];
 		if!(isDedicated) then { wcgarbage = wcmessageW spawn EXT_fnc_infotext; } else { ["wcmessageW", "client"] call WC_fnc_publicvariable;};
 
 		sleep 0.5;
 
-		wcmessageW = ["Casualty", format["%1 Vehicles destroyed", wcnumberofkilledofmissionV]];
+		wcmessageW = ["Casualty Report:", format["%1 Vehicles destroyed", wcnumberofkilledofmissionV]];
 		if!(isDedicated) then { wcgarbage = wcmessageW spawn EXT_fnc_infotext; } else { ["wcmessageW", "client"] call WC_fnc_publicvariable;};
 
 		sleep 0.5;
@@ -336,7 +336,7 @@
 				};
 			};
 		};
-		wcmessageW = ["Military intervention", format["%1 fame", _fame]];
+		wcmessageW = ["Military Intervention:", format["%1 fame", _fame]];
 		if!(isDedicated) then { wcgarbage = wcmessageW spawn EXT_fnc_infotext; } else { ["wcmessageW", "client"] call WC_fnc_publicvariable;};
 
 		sleep 0.5;
